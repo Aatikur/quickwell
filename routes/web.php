@@ -11,6 +11,10 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+
+require __DIR__.'/frontend.php';
+require __DIR__.'/admin.php';
+
+// Route::get('/', function () {
+//     return view('welcome');
+// });

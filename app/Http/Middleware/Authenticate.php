@@ -3,7 +3,7 @@
 namespace App\Http\Middleware;
 
 use Illuminate\Auth\Middleware\Authenticate as Middleware;
-
+use Illuminate\Support\Facades\Auth;
 class Authenticate extends Middleware
 {
     /**
@@ -12,10 +12,21 @@ class Authenticate extends Middleware
      * @param  \Illuminate\Http\Request  $request
      * @return string|null
      */
-    protected function redirectTo($request)
+    protected function redirectTo($request,$guard = null)
     {
         if (! $request->expectsJson()) {
-            return route('login');
+            if (Auth::guard($guard)->check()) {
+                dd($guard);
+                switch ($guard) {
+                    
+                    case 'admin':
+                       $route = 'admin/deshboard';
+                       break;
+                  default:
+                       $route = 'admin/deshboard';
+               }
+               return redirect($route);
+           }
         }
     }
 }
