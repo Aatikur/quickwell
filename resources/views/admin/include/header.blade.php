@@ -16,7 +16,6 @@
     <title>Quickwell</title>
     {{-- <link rel="icon" href="{{ asset('logo/logo.png')}}" type="image/icon type"> --}}
 
-
     <!-- Bootstrap -->
     <link href="{{asset('admin/vendors/bootstrap/dist/css/bootstrap.min.css')}}" rel="stylesheet">
     <!-- Font Awesome -->
@@ -50,7 +49,7 @@
     <link href="{{asset('admin/build/css/custom.min.css')}}" rel="stylesheet">
   </head>
 
-  <body class="nav-md">
+  <body class="{{ $class='nav-md' ?? '' }}">
     <div class="container body">
       <div class="main_container">
         <div class="col-md-3 left_col">
@@ -70,7 +69,7 @@
                 <img src="images/img.jpg" alt="..." class="img-circle profile_img">
               </div> --}}
               <div class="profile_info">
-                <span>Welcome,<b>Admin</b></span>
+                <span>Welcome,<b>{{ Auth::guard('admin')->user()->name }}</b></span>
                 
               </div>
             </div>
@@ -83,7 +82,48 @@
               <div class="menu_section">
                 <h3>General</h3>
                 <ul class="nav side-menu">
-                  <li><a href="{{ route('admin.deshboard')}}"><i class="fa fa-home"></i> Home </span></a></li>
+                  <li><a href="{{ route('admin.deshboard')}}"><i class="fa fa-home"></i> Home </a></li>
+                  <li>
+                      <a><i class="fa fa-users" aria-hidden="true"></i> User <span class="fa fa-chevron-down"></span></a>
+                      <ul class="nav child_menu">
+                        <li><a href="{{ route('admin.carrier')}}">All Users</a></li>
+                      </ul>
+                  </li>
+                  <li>
+                      <a><i class="fa fa-first-order" aria-hidden="true"></i> Order <span class="fa fa-chevron-down"></span></a>
+                      <ul class="nav child_menu">
+                        <li><a href="{{ route('admin.carrier')}}">All Orders</a></li>
+                      </ul>
+                  </li>
+                  {{-- <li>
+                      <a><i class="fa fa-gift" aria-hidden="true"></i> Package <span class="fa fa-chevron-down"></span></a>
+                      <ul class="nav child_menu">
+                        <li><a href="{{ route('admin.package')}}">Add Package</a></li>
+                        <li><a href="{{ route('admin.package_list')}}">Package List</a></li>
+                      </ul>
+                  </li> --}}
+                  <li>
+                      <a><i class="fa fa-certificate" aria-hidden="true"></i> Testimonial <span class="fa fa-chevron-down"></span></a>
+                      <ul class="nav child_menu">
+                        <li><a href="{{ route('admin.testimonial')}}">Post Testimonial</a></li>
+                        <li><a href="{{ route('admin.testimonial_list')}}">Testimonial List</a></li>
+                      </ul>
+                  </li>
+                  <li>
+                      <a><i class="fa fa-graduation-cap" aria-hidden="true"></i> Career <span class="fa fa-chevron-down"></span></a>
+                      <ul class="nav child_menu">
+                        <li><a href="{{ route('admin.carrier')}}">Post Job Openings</a></li>
+                        <li><a href="{{ route('admin.carrier_list')}}">Job Openings</a></li>
+                        <li><a href="{{ route('admin.carrier')}}">Applicant List</a></li>
+                      </ul>
+                  </li>
+                  <li>
+                      <a><i class="fa fa-newspaper-o" aria-hidden="true"></i> Blog <span class="fa fa-chevron-down"></span></a>
+                      <ul class="nav child_menu">
+                        <li><a href="{{ route('admin.blog')}}">Post Blog</a></li>
+                        <li><a href="{{ route('admin.blog_list') }}">Blog List</a></li>
+                      </ul>
+                  </li>
                 </ul>
               </div>
 

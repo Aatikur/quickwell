@@ -25,7 +25,6 @@ class LoginController extends Controller
             'email' => $request->input('email'),
             'password'  => $request->input('password'),
         );
-
         if (Auth::guard('admin')->attempt($credentials )) {
 
             return redirect()->intended('/admin/dashboard');
