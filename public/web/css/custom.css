@@ -1,0 +1,44 @@
+.abt_section {
+    padding: 0 30px;
+}
+.verify button {
+    margin-top: 10px;
+    padding: 12px;
+    margin-bottom: 10px;
+    color: #fff;
+    background: #f4ab01;
+    border-color: #f4ab01;
+}
+.blog_main .blog_txt h1 a {
+    color: #333;
+}
+.blog_main .blog_about p {
+    color: #333333;
+}
+.faq .accordionFifteen .panel .panel-heading a[aria-expanded="true"]{
+    color: #2ec8a6;
+}
+.abt_txt p.sub_header {
+    color:#333;
+    font-weight: 700;
+    text-decoration: underline;
+    margin-bottom: 0;
+}
+.contect_form1 label {
+    display: inline-block;
+    margin-bottom: 0;
+    margin-top: 10px;
+    color: #2ec8a6;
+}
+.abt_block {
+    border: 1px solid #2ec8a6;
+    padding: 10px 20px 20px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+.about_wrapper.career {
+    padding: 95px 0 40px;
+}
+.profile h3 {
+    color: #777;
+}

@@ -1,0 +1,81 @@
+@extends('web.templet.master')
+
+    {{-- @include('web.include.seo') --}}
+
+    @section('seo')
+    @endsection
+
+    @section('content')
+        <!-- med_tittle_section-->
+        <div class="med_tittle_section">
+            <div class="med_img_overlay"></div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                        <div class="med_tittle_cont_wrapper">
+                            <div class="med_tittle_cont">
+                                <h1> Terms and Conditions</h1>
+                                <ol class="breadcrumb">
+                                    <li><a href="{{route('web.index')}}">Home</a>
+                                    </li>
+                                    <li> Terms and Conditions</li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- med_tittle_section End-->
+
+        <!--ser_abt section start-->
+        <div class="ser_abt">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 abt_section">
+                        <div class="abt_txt abt_txt_resp">
+                            <h3 class="med_toppadder20">Terms and Conditions</h3>
+                            <p class="sub_header">Use of the Platform or Services</p>
+                            <p>Please read the following terms and conditions carefully before registering on, accessing, browsing, downloading or using the QUICKWELL REMEDY HEALTHCARE PVT. LTD. website located at https://www.quickwellhealthcare.com, and all associated sites linked to https://www.quickwellhealthcare.com, or any similar platform (hereinafter collectively, the QUICKWELL REMEDY HEALTHCARE PVT. LTD. Platform, having its registered office at F NO 301, Block C, Rajendra Park, Sector 105, Gurugram, Haryana 122001 on any device and/or before availing any services offered by QUICKWELL REMEDY HEALTHCARE PVT. LTD on the QUICKWELL REMEDY HEALTHCARE PVT. LTD. (hereinafter individually, and collectively, the QUICKWELL REMEDY HEALTHCARE PVT. LTD. Services) For the avoidance of doubt, it is clarified that these terms and conditions shall apply to all Our Services.</p>
+                            
+                            <p class="sub_header">Acceptance</p>
+                            <p>By registering on, accessing, browsing, downloading or using the Platform for any general-purpose or for the specific purpose of availing any QUICKWELL REMEDY HEALTHCARE PVT. LTD Service, You agree to be bound by the single-sign-on ID (hereinafter SSOID) terms and conditions set forth below as well as by the service-specific terms and conditions applicable to each QUICKWELL REMEDY HEALTHCARE PVT. LTD. Service (hereinafter collectively, the T&Cs). These T&Cs shall also include any additional or modified terms and conditions in relation to the SSOID or any additional or modified service-specific T&Cs in relation to any QUICKWELL REMEDY HEALTHCARE PVT. LTD. Service or any future service that may be offered by QUICKWELL REMEDY HEALTHCARE PVT. LTD on the QUICKWELL REMEDY HEALTHCARE PVT. LTD.  Platform. By registering on, accessing, browsing, downloading, or using (as applicable) the QUICKWELL REMEDY HEALTHCARE PVT. LTD. Platform or availing any QUICKWELL REMEDY HEALTHCARE PVT. LTD. Service or the SSOID, You automatically and immediately agree to all the T&Cs. If at any time You do not accept or agree with any of the T&Cs or do not wish to be bound by the T&Cs, You may not access, browse or use the QUICKWELL REMEDY HEALTHCARE PVT. LTD.  Platform and immediately terminate your availing the QUICKWELL REMEDY HEALTHCARE PVT. LTD. Services. Accepting or agreeing to the T&Cs will constitute a legal contract (hereinafter Agreement) between You, being at least 18 years of age and an individual user of the HDU QUICKWELL REMEDY HEALTHCARE PVT. LTD. Platform or a customer, donor or beneficiary of the QUICKWELL REMEDY HEALTHCARE PVT. LTD. Services. All services are rendered by HDU HEALTHCARE PVT. LTD. through the QUICKWELL REMEDY HEALTHCARE PVT. LTD Platform under the brand name “QUICKWELL REMEDY HEALTHCARE PVT. LTD ” (or any derivatives or variations thereof). Consequently, all the rights, benefits, liabilities and obligations under the T&Cs shall, as the case may be, accrue to the benefit of, or incurred by, QUICKWELL REMEDY HEALTHCARE PVT. LTD., regarding Your use of QUICKWELL REMEDY HEALTHCARE PVT. LTD. ’s digital services (which includes donation and contribution), or any such other services which may be added on the QUICKWELL REMEDY HEALTHCARE PVT. LTD. Platform and which will henceforth be a QUICKWELL REMEDY HEALTHCARE PVT. LTD. Service, from time to time. The QUICKWELL REMEDY HEALTHCARE PVT. LTD. Services shall be used by You subject to Your adherence with the T&Cs. As long as You accept and comply with these T&Cs, QUICKWELL REMEDY HEALTHCARE PVT. LTD. grants You a personal, nonexclusive, non-transferable, limited, revocable privilege to enter and use the QUICKWELL REMEDY HEALTHCARE PVT. LTD.  Platform and/or avail the QUICKWELL REMEDY HEALTHCARE PVT. LTD.</p>
+                            
+                            <p class="sub_header">Indemnification</p>
+                            <p class="mb-0">You agree to indemnify, save, and hold QUICKWELL REMEDY HEALTHCARE PVT. LTD., its affiliates, employees, officers, directors and partners harmless from any and all claims, losses, damages, and liabilities, costs and expenses, including without limitation legal fees and expenses, arising out of or related to:</p>
+                            <div class="abt_chk med_toppadder10">
+                                <div class="content">
+                                    <ul>
+                                        <li><i class="fa">(I)</i><span>Your use or misuse of the QUICKWELL REMEDY HEALTHCARE PVT. LTD. Services or of the QUICKWELL REMEDY HEALTHCARE PVT. LTD.  Platform;</span></li>  
+                                        <li><i class="fa">(II)</i><span>any violation by You of this Agreement or the SSOID Agreement; or</span></li>  
+                                        <li><i class="fa">(III)</i><span>any breach of the representations, warranties, and covenants made by You herein.</span></li>                                                                 
+                                    </ul>
+                                </div>
+                            </div>
+                            <p>QUICKWELL REMEDY HEALTHCARE PVT. LTD. reserves the right, at Your expense, to assume the exclusive defence and control of any matter for which You are required to identify QUICKWELL REMEDY HEALTHCARE PVT. LTD., including rights to settle, and You agree to cooperate with we defence and settlement of these claims. We will use reasonable efforts to notify You of any claim, action, or proceeding brought by a third party that is subject to the foregoing indemnification upon becoming aware of it. This paragraph shall survive termination of this Agreement.</p>
+
+                            <p class="sub_header">Disclaimer; No Warranties</p>
+                            <p>To the fullest extent permissible pursuant to applicable law, QUICKWELL REMEDY HEALTHCARE PVT. LTD.  and its third-party partners disclaim all warranties or guarantees – whether statutory, express or implied – including, but not limited to, implied warranties of merchantability, fitness for a particular purpose, and non-infringement of proprietary rights. No advice or information, whether oral or written, obtained by You from QUICKWELL REMEDY HEALTHCARE PVT. LTD. or through the QUICKWELL REMEDY HEALTHCARE PVT. LTD.  Services or the QUICKWELL REMEDY HEALTHCARE PVT. LTD. Platform will create any warranty or guarantee other than those expressly stated herein. For the purposes of this Disclaimer, You expressly acknowledge that as used in this section, the term “QUICKWELL REMEDY HEALTHCARE PVT. LTD.” includes QUICKWELL REMEDY HEALTHCARE PVT. LTD.’s officers, directors, employees. You acknowledge that QUICKWELL REMEDY HEALTHCARE PVT. LTD.  (https://www.quickwellhealthcare.com) is a purely social not-profit enterprise, registered under West Bengal ACT XXVI of 1961, 2016-2017 and is not liable for any third party (telecom companies, mobile operators or suppliers) obligations due to rates, quality and all other instances, whether to any such telecom companies’ subscribers or otherwise. You expressly agree that the use of the QUICKWELL REMEDY HEALTHCARE PVT. LTD. Services on our Platform is at Your sole risk. It is Your responsibility to evaluate the accuracy, completeness and usefulness of all opinions, advice, services, merchandise and other information provided through the site or on the Internet generally. We do not warrant that our Services will be uninterrupted or error-free or that defects in the site will be corrected. The QUICKWELL REMEDY HEALTHCARE PVT. LTD. Services and our Platform and any data, information, third party software, reference sites, services, or software made available in conjunction with or through the services and the site are provided on an “as is” and “as available,” “with all faults” basis and without warranties or representations of any kind either express or implied. QUICKWELL REMEDY HEALTHCARE PVT. LTD. , and its partners do not warrant that the data, our software, functions, or any other information offered on or through our Services/ our Platform or any reference sites/ platforms/ services will be uninterrupted, or free of errors, viruses or other harmful components and do not warrant that any of the foregoing will be corrected. QUICKWELL REMEDY HEALTHCARE PVT. LTD. and its licensors, and partners do not warrant or make any representations regarding the use or the results of the use of Our Services/ Our Platform or any reference sites/ platforms/ services in terms of correctness, accuracy, reliability, or otherwise. You understand and agree that You use, access, download, or otherwise obtain information, materials, or data through Our Services/ Our Platform or any reference sites/ platforms/ services at Your own discretion and risk and that You will be solely responsible for any damage to Your property (including Your computer system and mobile device or any other equipment) or loss of data that results from the download or use of such material or data. We do not authorize anyone to make any warranty on our behalf and You should not rely on any such statement. This paragraph shall survive the termination of this Agreement. In no event will QUICKWELL REMEDY HEALTHCARE PVT. LTD. be liable for any incidental, consequential, or indirect damages (including, but not limited to, damages for loss of profits, business interruption, loss of programs or information and the like) arising out of the use of or inability to use Our Platform.</p>
+
+                        <p class="sub_header"> Ownership; Proprietary Rights</p>
+                            <p>The QUICKWELL REMEDY HEALTHCARE PVT. LTD. Services and Our Platform are owned and operated by QUICKWELL REMEDY HEALTHCARE PVT. LTD.  for Social Welfare. The visual interfaces, graphics, design, compilation, information, computer code (including source code and object code), services, and all other elements of Our Services and Our Platform provided by QUICKWELL REMEDY HEALTHCARE PVT. LTD.  for Social Welfare are protected by international conventions, and all other relevant intellectual property and proprietary rights, and applicable laws. As between You and QUICKWELL REMEDY HEALTHCARE PVT. LTD.  , all services and programs contained on Our are the property of QUICKWELL REMEDY HEALTHCARE PVT. LTD.  for Social Welfare. You agree not to remove, obscure, or alter Anudip or any third party’s copyright, patent, trademark, or other proprietary rights notices affixed to or contained within or accessed in conjunction with or through Our Services/ Platform. Except as expressly authorized by QUICKWELL REMEDY HEALTHCARE PVT. LTD.  , You agree not to sell, license, distribute, copy, modify, publicly perform or display, transmit, publish, edit, adapt, create derivative works from, or otherwise make unauthorized use of the services. QUICKWELL REMEDY HEALTHCARE PVT. LTD. reserves all rights not expressly granted in this Agreement. If You have comments regarding Our Services and/or Our Platform or ideas on how to improve it, please contact customer service. Please note that by doing so, You hereby irrevocably assign to QUICKWELL REMEDY HEALTHCARE PVT. LTD.  , and shall assign to QUICKWELL REMEDY HEALTHCARE PVT. LTD.  , all rights, title and interests in and to all ideas and suggestions and any and all worldwide intellectual property rights associated therewith. You agree to perform such acts and execute such documents as may be reasonably necessary to perfect the foregoing rights.</p>
+
+                            <p class="sub_header">Dispute Resolution</p>
+                            <p>If any dispute, controversy or claim arises under this Agreement or in relation to any QUICKWELL REMEDY HEALTHCARE PVT. LTD. Service or our Platform, including any question regarding the existence, validity or termination of this Agreement or T&Cs (hereinafter Dispute), the parties shall use all reasonable endeavors to resolve such Dispute amicably. If the parties are unable to resolve the Dispute amicably within 30 days of the notice of such Dispute, QUICKWELL REMEDY HEALTHCARE PVT. LTD.,may elect to resolve any Dispute by binding arbitration in accordance with the provisions of the Indian Arbitration & Conciliation Act, 1996 (hereinafter Act). Such Dispute shall be arbitrated on an individual basis and shall not be consolidated in any arbitration with any claim or controversy of any other party. The Dispute shall be resolved by a sole arbitrator, appointed in accordance with the Act. The seat of the arbitration shall be Haryana and the language of this arbitration shall be English. Either You or Anudip may seek any interim or preliminary relief from a court of competent jurisdiction in Delhi necessary to protect the rights or the property belonging to You or QUICKWELL REMEDY HEALTHCARE PVT. LTD.(or any of our agents, suppliers, and subcontractors), pending the completion of arbitration. Any arbitration shall be confidential, and neither You nor QUICKWELL REMEDY HEALTHCARE PVT. LTD may disclose the existence, content or results of any arbitration, except as may be required by law or for purposes of enforcing the arbitration award. All administrative fees and expenses of arbitration will be divided equally between You and QUICKWELL REMEDY HEALTHCARE PVT. LTD.  . In all arbitrations, each party will bear the expense of its own lawyers and preparation. This paragraph shall survive termination of this Agreement.</p>
+
+                            <p class="sub_header">Governing Law and Forum for Disputes</p>
+                            <p>Subject to the Dispute Resolution section above, you agree that any claim or dispute You may have against QUICKWELL REMEDY HEALTHCARE PVT. LTD. must be resolved by a court having jurisdiction in Haryana, India. You agree to submit to the personal jurisdiction of the courts located within Haryana, India, for the purpose of litigating all such claims or disputes. This Agreement shall be governed by Indian law. This paragraph shall survive termination of this Agreement. <br>
+    
+                            “I agree to be contacted by Quickwell Remedy Healthcare Pvt. Ltd. over phone and e-mail. I do not have any objection to receiving emails, messages (SMS or any other mode) and calls from Quickwell Remedy Healthcare Pvt. Ltd. This consent shall supersede any preferences set through Do Not Disturb (DND Register)/ National Customer Preference Register (NCPR)”</p>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--ser_abt section end-->
+    @endsection
+
+    @section('script') 
+    @endsection
+	
