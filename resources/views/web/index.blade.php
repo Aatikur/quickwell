@@ -116,7 +116,7 @@
                             </div>
                             <div class="price_box1_wrapper">
                                 <div class="price_box1">
-                                    <h1><sub>₹</sub><span>10,000</span></h1>
+                                    <h1><sub>₹</sub><span>{{ $package1->amount }}</span></h1>
                                     <p>/ per Day</p>
                                 </div>
                             </div>
@@ -137,7 +137,7 @@
                             <div class="pricing_btn_wrapper">
                                 <div class="pricing_btn">
                                     <ul>
-                                        <li><a href="{{route('web.package.package_detail')}}">View Detail</a>
+                                        <li><a href="{{route('web.package.package_detail',  ['id'=> encrypt($package1->id)])}}">View Detail</a>
                                         </li>
                                     </ul>
                                 </div>
@@ -151,7 +151,7 @@
                             </div>
                             <div class="price_box1_wrapper">
                                 <div class="price_box1">
-                                    <h1><sub>₹</sub><span>12,000</span></h1>
+                                    <h1><sub>₹</sub><span>{{ $package2->amount }}</span></h1>
                                     <p>/ per Day</p>
                                 </div>
                             </div>
@@ -171,7 +171,7 @@
                             <div class="pricing_btn_wrapper">
                                 <div class="pricing_btn">
                                     <ul>
-                                        <li><a href="{{route('web.package.package_detail')}}">View Detail</a>
+                                        <li><a href="{{route('web.package.package_detail',  ['id'=> encrypt($package2->id)])}}">View Detail</a>
                                         </li>
                                     </ul>
                                 </div>
@@ -243,66 +243,35 @@
                             <img src="{{asset('web/images/Icon_team.png')}}" alt="line" class="med_bottompadder20">
                         </div>
                     </div>
-                    <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12 col-12">
-                        <div class="blog_about">
-                            <div class="blog_img">
-                                <figure>
-                                    <img src="{{asset('web/images/blog_img_1.jpg')}}" alt="img" class="img-responsive">
-                                </figure>
-                            </div>
-                            <div class="blog_txt">
-                                <h1><a href="{{route('web.blog.single-blog')}}">Blog Image Post</a></h1>
-                                <div class="blog_txt_info">
-                                    <ul>
-                                        <li>BY ADMIN</li>
-                                        <li>SEPT.29,2020</li>
-                                    </ul>
+                    @if(isset($blogs) && !empty($blogs))
+                    @foreach ($blogs as $blog)
+                        <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12 col-12">
+                            <div class="blog_about">
+                                <div class="blog_img">
+                                    <figure>
+                                        <img src="{{asset('admin/post/thumb/'.$blog->image)}}" alt="img" class="img-responsive">
+                                    </figure>
                                 </div>
-                                <p>Sollicitudin, lorem quis bibe u auctor, nisi elit conat ipsu, nec sagittis sem ni id elit. Duis sed odio sit amet nibh vulpute cursus.</p>
-                                <a href="{{route('web.blog.single-blog')}}">Read More <i class="fa fa-long-arrow-right"></i></a>
+                                <div class="blog_txt">
+                                    <h1><a href="{{route('web.single_post',['slug'=>urlencode($blog->slug),'id'=>$blog->id])}}">{{ $blog->titile }}</a></h1>
+                                    <div class="blog_txt_info">
+                                        <ul>
+                                            <li>WRITTEN ON: {{ date_format($blog->created_at, 'M m, Y') }}</li>
+                                        </ul>
+                                    </div>
+                                    <p>{!! Str::words($blog->body, 25, '...') !!}</p>
+                                    <a href="{{route('web.single_post',['slug'=>urlencode($blog->slug),'id'=>$blog->id])}}">Read More <i class="fa fa-long-arrow-right"></i></a>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12 col-12">
-                        <div class="blog_about">
-                            <div class="blog_img">
-                                <figure>
-                                    <img src="{{asset('web/images/blog_img_2.jpg')}}" alt="img" class="img-responsive">
-                                </figure>
-                            </div>
+                    @endforeach
+                    @else
+                        <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12 col-12">
                             <div class="blog_txt">
-                                <h1><a href="{{route('web.blog.single-blog')}}">Blog Image Post</a></h1>
-                                <div class="blog_txt_info">
-                                    <ul>
-                                        <li>BY ADMIN</li>
-                                        <li>SEPT.29,2020</li>
-                                    </ul>
-                                </div>
-                                <p>Sollicitudin, lorem quis bibe u auctor, nisi elit conat ipsu, nec sagittis sem ni id elit. Duis sed odio sit amet nibh vulpute cursus.</p>
-                                <a href="{{route('web.blog.single-blog')}}">Read More <i class="fa fa-long-arrow-right"></i></a>
+                                <h3>No Blog Post Found!</h3>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12 col-12">
-                        <div class="blog_about">
-                            <div class="blog_img">
-                                <figure>
-                                    <img src="{{asset('web/images/blog_img_3.jpg')}}" alt="img" class="img-responsive">
-                                </figure>
-                            </div>
-                            <div class="blog_txt">
-                                <h1><a href="{{route('web.blog.single-blog')}}">Blog Image Post</a></h1>
-                                <div class="blog_txt_info">
-                                    <ul>
-                                        <li>BY ADMIN</li>
-                                        <li>SEPT.29,2020</li>
-                                    </ul>
-                                </div>
-                                <p>Sollicitudin, lorem quis bibe u auctor, nisi elit conat ipsu, nec sagittis sem ni id elit. Duis sed odio sit amet nibh vulpute cursus.</p>
-                                <a href="{{route('web.blog.single-blog')}}">Read More <i class="fa fa-long-arrow-right"></i></a>
-                            </div>
-                        </div>
-                    </div>
+                    @endif
                 </div>
             </div>
         </div>

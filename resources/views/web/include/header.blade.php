@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="content-type" content="text/html;charset=utf-8" />
-    <title>Qickwell Remedy || Taking Care From Home</title>
+    <title>Quickwell Remedy || Taking Care From Home</title>
     <meta content="width=device-width, initial-scale=2.0" name="viewport" />
     <meta name="description" content="Qickwell" />
     <!-- style -->
@@ -17,6 +17,7 @@
     <link rel="stylesheet" type="text/css" href="{{asset('web/css/fonts.css')}}">
     <link rel="stylesheet" type="text/css" href="{{asset('web/css/style.css')}}">
     <link rel="stylesheet" type="text/css" href="{{asset('web/css/responsive.css')}}">
+    @yield('css')
     <!-- favicon link-->
     <link rel="shortcut icon" type="image/icon" href="{{asset('web/images/fav.png')}}" />
 <script src='../../../google_analytics_auto.js'></script></head>
@@ -40,8 +41,17 @@
                     </div>
                     <div class="top_login">
                         <ul>
-                            <li><i class="fa fa-sign-in" aria-hidden="true"></i><a href="{{route('web.login')}}">Log In</a> | <a href="{{route('web.register')}}" style="padding-left:0">Register</a></li>
-                            <li><i class="fa fa-user" aria-hidden="true"></i><a href="{{route('web.account.account')}}">Account</a> | <a href="#" style="padding-left:0">Logout</a></li>
+                            @if(Auth::guard('web')->check())
+                                <li>
+                                    <i class="fa fa-user" aria-hidden="true"></i><a href="{{route('web.account.account')}}">Account</a> | 
+                                    <a href="#" onclick="event.preventDefault();document.getElementById('logout-form').submit();" style="padding-left:0"><i class="fa fa-sign-out pull-right"></i> Log Out</a>
+                                    <form id="logout-form" action="{{ route('web.logout') }}" method="POST" style="display: none;">
+                                        @csrf
+                                    </form>    
+                                </li>
+                            @else
+                                <li><i class="fa fa-sign-in" aria-hidden="true"></i><a href="{{route('web.login')}}">Log In</a> | <a href="{{route('web.register')}}" style="padding-left:0">Register</a></li>
+                            @endif
                         </ul>
                     </div>
                 </div>
@@ -61,7 +71,7 @@
                     <div class="kv_navigation_wrapper">
                         <div class="mainmenu  d-xl-block d-lg-block d-md-block d-sm-none d-none">
                             <ul class="main_nav_ul">
-                                <li class="gc_main_navigation"><a href="{{route('web.index')}}" class="gc_main_navigation hover_color"> INDEX </a></li>
+                                <li class="gc_main_navigation"><a href="{{route('web.index')}}" class="gc_main_navigation hover_color"> Home </a></li>
                                 <li class="gc_main_navigation"><a href="{{route('web.doctor_on_call.doctor_on_call')}}" class="gc_main_navigation hover_color"> DOCTOR ON CALL </a></li>
                                 <li class="gc_main_navigation"><a href="{{route('web.team.team')}}" class="gc_main_navigation hover_color"> OUR TEAM </a></li>
                                 <li class="gc_main_navigation"><a href="{{route('web.career.career')}}" class="gc_main_navigation hover_color"> CAREER </a></li>

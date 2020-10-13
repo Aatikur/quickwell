@@ -36,7 +36,7 @@ class BlogsController extends Controller
             Image::make($image)->save($original_path);
             $thumb_path = base_path().'/public/admin/post/thumb/'.$image_name;
             Image::make($image)
-            ->resize(300, 400)
+            ->resize(346, 252)
             ->save($thumb_path);
         }
 

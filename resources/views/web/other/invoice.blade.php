@@ -2,8 +2,9 @@
 <html lang="en" >
     <head>
         <meta charset="UTF-8">
-        <title>CodePen - Invoice</title>
-        <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css'><link rel="stylesheet" href="./style.css">
+        <title>Invoice</title>
+        <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css'>
+        <link rel="stylesheet" href="./style.css">
         <style>.borderless tr {border: none;}</style>
     </head>
     <body>
@@ -14,7 +15,7 @@
                     <div class="row">
                         <div class="col-md-8 col-md-offset-2">
                             <div class="col-md-4 pull-left">
-                                <strong>INVOICE: ANU 123</strong><br>
+                                <strong>ORDER ID: ANU 123</strong><br>
                                 Created: 02/04/2019 <br>
                                 Due: 05/04/2019
                             </div>

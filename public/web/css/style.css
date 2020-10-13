@@ -6204,7 +6204,7 @@ ul {
 	text-align: center;
 	margin-bottom: 30px;
 }
-.login_btn a {
+.login_btn button {
 	background: #2ec8a6;
 	border: 2px solid #fff;
 	font-weight: 600;
@@ -6219,10 +6219,10 @@ ul {
 	cursor: pointer;
 	border-radius: 25px;
 }
-.log a {
+.log button {
 	width: 100%;
 }
-.login_btn a:hover {
+.login_btn button:hover {
 	border: 2px solid #2ec8a6;
 	background-color: transparent;
 	color: #2ec8a6;

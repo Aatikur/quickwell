@@ -23,8 +23,11 @@ class RedirectIfAuthenticated
                case 'admin':
                    $route = 'admin/deshboard';
                    break;
+               case 'user':
+                   $route = '/';
+                   break;
               default:
-                   $route = 'admin/deshboard';
+                   $route = '/';
            }
            return redirect($route);
        }

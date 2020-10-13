@@ -3,15 +3,42 @@
 use Illuminate\Http\Request;
 
 
-// ========== Index =========
-Route::get('/', function () {
-    return view('web.index');
-})->name('web.index');
+// ========== Home =========
+Route::group(['namespace' => 'Frontend'], function () {
+    Route::get('/', 'FrontendController@index')->name('web.index');
+    // Package
+    Route::group(['namespace' => 'Package'], function () {
+        Route::get('/package-detail/{id}', 'PackageController@showPackage')->name('web.package.package_detail');
 
-// ========== Login =========
-Route::get('/Login', function () {
-    return view('web.login');
-})->name('web.login');
+        Route::group(['middleware' => 'auth:web'], function () {
+            Route::post('/book/package/', 'PackageController@bookPackage')->name('web.package_book');
+            Route::post('payumoney/response', 'PackageController@response')->name('web.payment.response');
+            Route::get('/Invoice', 'PackageController@invoice')->name('web.package.invoice');
+        });
+    });
+    // Login
+    Route::group(['namespace' => 'Login'], function () {
+        Route::get('/login', 'LoginController@login')->name('web.login');
+        Route::post('/user/login', 'LoginController@userLogin')->name('web.user.login');
+        Route::post('/user/logout', 'LoginController@logout')->name('web.logout');
+    });
+    // Register
+    Route::group(['namespace' => 'Register'], function () {
+        Route::get('/register', 'RegisterController@index')->name('web.register');
+        Route::post('/user/register', 'RegisterController@register')->name('web.user.register');
+    });
+    // Blog
+    Route::group(['namespace' => 'Blog'], function () {
+        Route::get('/posts/{slug}/{id}', 'BlogsController@showPost')->name('web.single_post');
+    });
+
+    // Profile Section
+    Route::group(['namespace' => 'Profile'], function () {
+        Route::get('/account', 'ProfileController@index')->name('web.account.account');    
+    });
+});
+
+
 
 // ========== Forgot Password =========
 Route::get('/Forgot-password', function () {
@@ -23,15 +50,9 @@ Route::get('/Confirm-password', function () {
     return view('web.password.confirm-pasword');
 })->name('web.password.confirm-pasword');
 
-// ========== Register =========
-Route::get('/Register', function () {
-    return view('web.register');
-})->name('web.register');
 
-// ========== Account =========
-Route::get('/Account', function () {
-    return view('web.account.account');
-})->name('web.account.account');
+
+
 
 // ========== Contact =========
 Route::get('/Contact', function () {
@@ -48,10 +69,7 @@ Route::get('/Blog', function () {
     return view('web.blog.blog');
 })->name('web.blog.blog');
 
-// ========== Single-Blog =========
-Route::get('/Single-Blog', function () {
-    return view('web.blog.single-blog');
-})->name('web.blog.single-blog');
+
 
 // ========== Career =========
 Route::get('/Career', function () {
@@ -73,10 +91,6 @@ Route::get('/Testimonial', function () {
     return view('web.testimonial.testimonial');
 })->name('web.testimonial.testimonial');
 
-// ========== Package_detail =========
-Route::get('/Package-detail', function () {
-    return view('web.package.package_detail');
-})->name('web.package.package_detail');
 
 // ========== Terms&Condition =========
 Route::get('/TermsandCondition', function () {
@@ -94,6 +108,3 @@ Route::get('/Privacy', function () {
 })->name('web.other.privacy');
 
 // ========== Invoice =========
-Route::get('/Invoice', function () {
-    return view('web.other.invoice');
-})->name('web.other.invoice');

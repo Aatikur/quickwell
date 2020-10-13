@@ -14,7 +14,7 @@
                 <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
                     <div class="med_tittle_cont_wrapper">
                         <div class="med_tittle_cont">
-                            <h1>Package detail</h1>
+                            <h1>{{ $package->name }}</h1>
                             <ol class="breadcrumb">
                                 <li><a href="{{route('web.index')}}">Home</a>
                                 </li>
@@ -37,26 +37,47 @@
                         <h1 class="med_bottompadder20">Book Package</h1>
                         <img src="{{asset('web/images/line.png')}}" alt="title" class="med_bottompadder20">
                     </div>
-
-                    <form>
+                    @if (Session::has('message'))
+                        <div class="alert alert-success" >{{ Session::get('message') }}</div>
+                     @endif
+                     @if (Session::has('error'))
+                        <div class="alert alert-danger">{{ Session::get('error') }}</div>
+                     @endif
+                    {{ Form::open(['method' => 'post','route'=>'web.package_book']) }}
                         <div class="cont_main_section">
                             <div class="row">
                                 <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
                                     <div class="contect_form1 dc_cont_div">
                                         <label for="">Patient Name </label>
-                                        <input type="text" name="full_name" placeholder="Full Name" class="require">
+                                        <input type="text" name="full_name" value="{{ old('full_name') }}" placeholder="Full Name" class="require">
+                                        <input type="hidden" name="amount" value="{{ $package->amount }}">
+                                        <input type="hidden" name="package_name" value="{{ $package->name }}">
+                                        @if (Auth::guard('web')->check())
+                                            <input type="hidden" name="mobile" value="{{ Auth::guard('web')->user()->mobile }}">
+                                            <input type="hidden" name="email" value="{{ Auth::guard('web')->user()->email }}">
+                                        @endif
+                                        @if($errors->has('full_name'))
+                                            <span class="invalid-feedback" role="alert" style="color:red">
+                                                <strong>{{ $errors->first('full_name') }}</strong>
+                                            </span>
+                                        @enderror
                                     </div>
                                 </div>
                                 <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
                                     <div class="contect_form1 dc_cont_div">
                                         <label for="">Start From</label>
-                                        <input type="date" name="contact_no" placeholder="Date" class="require">
+                                        <input type="date" name="date" value="{{ old('date') }}" placeholder="Date" class="require">
+                                        @if($errors->has('date'))
+                                            <span class="invalid-feedback" role="alert" style="color:red">
+                                                <strong>{{ $errors->first('date') }}</strong>
+                                            </span>
+                                        @enderror
                                     </div>
                                 </div>
                                 <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
                                     <div class="contect_form1 dc_cont_div">
                                         <label for="">Number of days</label>
-                                        <select>
+                                        <select name="days" value="{{ old('days') }}">
                                             <option> 1 </option>
                                             <option> 2 </option>
                                             <option> 3 </option>
@@ -68,15 +89,20 @@
                                             <option> 9 </option>
                                             <option> 10 </option>
                                         </select>
+                                        @if($errors->has('days'))
+                                            <span class="invalid-feedback" role="alert" style="color:red">
+                                                <strong>{{ $errors->first('days') }}</strong>
+                                            </span>
+                                        @enderror
                                     </div>
                                 </div>
                                 <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-                                        <input type="checkbox" name="contact_no" class="require"> I agreed to the <a href="{{route('web.other.tc')}}">Terms and Conditions</a> & <a href="{{route('web.other.refund')}}">Return Policy</a>
+                                    <input type="checkbox" name="contact_no" class="require" required> I agreed to the <a href="{{route('web.other.tc')}}">Terms and Conditions</a> & <a href="{{route('web.other.refund')}}">Return Policy</a>
                                 </div>
                                 <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
                                     <div class="response"></div>
                                     <div class="contact_btn_wrapper med_toppadder30">
-                                        <button type="button" class="submitForm">Pay Now</button>
+                                        <button type="submit" class="submitForm">Pay Now</button>
                                     </div>
                                 </div>
                             </div>
@@ -93,7 +119,7 @@
                         <div class="abt_txt">
                             <h3>Covid-19 Care (Covid19 Home Isolation and Quarantine)</h3>
                             <div class="price_box1">
-                                <h1><sub>₹</sub><span>10,000</span><sub>  / per Day</sub></h1>
+                                <h1><sub>₹</sub><span>{{ $package->amount }}</span><sub>  / per Day</sub></h1>
                             </div>
                             <p class="sub_header med_toppadder20"> Home isolation and quarantine package </p>
                         </div>
