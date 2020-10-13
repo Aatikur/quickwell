@@ -15,9 +15,9 @@
                     <div class="row">
                         <div class="col-md-8 col-md-offset-2">
                             <div class="col-md-4 pull-left">
-                                <strong>ORDER ID: ANU 123</strong><br>
-                                Created: 02/04/2019 <br>
-                                Due: 05/04/2019
+                                <strong>ORDER ID: {{ $order->order_id }}</strong><br>
+                                Created: {{ $order->created_at }} <br>
+                                Due: {{ $order->expires_at }}
                             </div>
                             <div class="col-md-4 pull-right">
                                 <img src="{{asset('web/images/logo2.png')}}" alt="logo" class="" style="max-width: 100px;">
@@ -49,10 +49,10 @@
                         </div>
                         <div class="panel-body">
                             <address>
-                                <strong>Vishal Nag</strong> <br>
-                                Adress: 103, Janak Palace, Manglam Enclave, RPS more Bailey Road, Patna- 801503<br>
-                                Phone: +91 95475 48865 <br>
-                                Email: info@quickwellhealthcare.com  <br>
+                                <strong>{{ $order->full_name }}</strong> <br>
+                                {{-- Adress: 103, Janak Palace, Manglam Enclave, RPS more Bailey Road, Patna- 801503<br> --}}
+                                Phone: +91 {{ $order->mobile }} <br>
+                                Email: {{ $order->email }}  <br>
                             </address>
                         </div>
                         </div>
@@ -69,35 +69,35 @@
                     </thead>
                     <tbody>
                         <tr>
-                            <td>Covid-19 Package </td>
-                            <td>7 </td>
-                            <td>10,000</td>
-                            <td>10/10/2020</td>
-                            <td class="text-right">70,000  </td>
+                            <td>{{ $order->package_name }} </td>
+                            <td>{{ $order->days }} </td>
+                            <td>{{ number_format($order->package_rate, 2) }}</td>
+                            <td>{{ $order->created_at }}</td>
+                            <td class="text-right">{{ number_format($order->sub_total, 2) }}  </td>
                         </tr>
                     </tbody>
                 </table>
                 <div class="row justify-content-end">
                     <div class="col-md-6">
-                        <strong>GST</strong>: 15% <br>
-                        <strong>Expiration date</strong>: 17/10/2020<br>
+                        <strong>GST</strong>: 18% <br>
+                        <strong>Expiration date</strong>: {{ $order->expires_at }}<br>
                         <strong>Payment Status</strong>: Paid <br>
-                        <strong>Purchased on</strong> 21/10/2016 at 18:02 <br>
+                        <strong>Purchased on</strong> {{ $order->created_at }} at 18:02 <br>
                     </div>
                     <div class="col-md-6">
                         <table class="table borderless">
                             <tbody>
                                 <tr>
                                     <th scope="row" class="text-right">Subtotal</th>
-                                    <th class="text-right">70,000</th>
+                                    <th class="text-right">{{ number_format($order->sub_total, 2) }}</th>
                                 </tr>
                                 <tr>
-                                    <th scope="row" class="text-right">GST 15%</th>
-                                    <th class="text-right">11,210</th>
+                                    <th scope="row" class="text-right">GST 18%</th>
+                                    <th class="text-right">{{ number_format($order->gst, 2) }}</th>
                                 </tr>
                                 <tr>
                                     <th scope="row" class="text-right">TOTAL</th>
-                                    <th class="text-right">70,210</th>
+                                    <th class="text-right">{{ number_format($order->total, 2) }}</th>
                                 </tr>
                             </tbody>
                         </table>

@@ -19,7 +19,6 @@
           <form class="form-horizontal" method="POST" action="{{ route('admin.update_testimonial') }}" enctype="multipart/form-data">
             {{ csrf_field() }}
             <input type="hidden" name="id" value="{{ $testimonial->id }}">
-
             <div class="form-group{{ $errors->has('image') ? ' has-error' : '' }}">
                 <label for="image" class="col-md-2 control-label">Image Upload</label>
                 <div class="col-md-10">
@@ -32,6 +31,28 @@
                     <div>
                         <img src="{{ asset('admin/post/thumb/'.$testimonial->image) }}" alt="image" height="200" width="400">
                     </div>
+                </div>
+            </div>
+            <div class="form-group{{ $errors->has('name') ? ' has-error' : '' }}">
+                <label for="name" class="col-md-2 control-label">Name</label>
+                <div class="col-md-10">
+                    <input type="text" class="form-control" name="name" value={{ $testimonial->name }} placeholder="Enter Patient Name" required>
+                    @if ($errors->has('name'))
+                        <span class="help-block">
+                            <strong>{{ $errors->first('name') }}</strong>
+                        </span>
+                    @endif
+                </div>
+            </div>
+            <div class="form-group{{ $errors->has('address') ? ' has-error' : '' }}">
+                <label for="address" class="col-md-2 control-label">Address</label>
+                <div class="col-md-10">
+                    <input type="text" class="form-control" name="address" value="{{ $testimonial->address }}" placeholder="Enter Patient Address" required>
+                    @if ($errors->has('address'))
+                        <span class="help-block">
+                            <strong>{{ $errors->first('address') }}</strong>
+                        </span>
+                    @endif
                 </div>
             </div>
             <div class="form-group{{ $errors->has('desc') ? ' has-error' : '' }}">

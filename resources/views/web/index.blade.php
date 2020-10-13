@@ -137,7 +137,7 @@
                             <div class="pricing_btn_wrapper">
                                 <div class="pricing_btn">
                                     <ul>
-                                        <li><a href="{{route('web.package.package_detail',  ['id'=> encrypt($package1->id)])}}">View Detail</a>
+                                        <li><a href="{{route('web.package.package_detail',  ['slug'=>urlencode($package1->slug), 'id'=> $package1->id])}}">View Detail</a>
                                         </li>
                                     </ul>
                                 </div>
@@ -171,7 +171,7 @@
                             <div class="pricing_btn_wrapper">
                                 <div class="pricing_btn">
                                     <ul>
-                                        <li><a href="{{route('web.package.package_detail',  ['id'=> encrypt($package2->id)])}}">View Detail</a>
+                                        <li><a href="{{route('web.package.package_detail', ['slug'=>urlencode($package2->slug),'id'=>$package2->id])}}">View Detail</a>
                                         </li>
                                     </ul>
                                 </div>

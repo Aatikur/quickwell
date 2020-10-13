@@ -20,8 +20,6 @@
               <tr>
                 <th>Sl. No</th>
                 <th>Designation</th>
-                <th>Educational Qualification</th>
-                <th>Work Experience</th>
                 <th>Action</th>
               </tr>
             </thead>
@@ -44,8 +42,6 @@
                 columns: [
                     { "render": function(data, type, full, meta) {return i++;}},
                     {data: 'designation', name: 'designation',searchable: true},
-                    {data: 'educational_qualification', name: 'educational_qualification',searchable: true},
-                    {data: 'work_experience', name: 'work_experience',searchable: true},
                     {data: 'action', name: 'action',searchable: true},
                 ]
             });

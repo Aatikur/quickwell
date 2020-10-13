@@ -16,8 +16,6 @@ class CreateCarriersTable extends Migration
         Schema::create('carriers', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('designation')->nullable();
-            $table->string('educational_qualification')->nullable();
-            $table->string('work_experience')->nullable();
             $table->mediumText('role')->nullable();
             $table->tinyInteger('status')->comment('1=Enable, 2=Disable')->default(1);
             $table->timestamps();

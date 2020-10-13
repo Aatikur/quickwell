@@ -20,6 +20,7 @@ class LoginController extends Controller
         ]);
         if (Auth::guard('web')->attempt(['mobile' => $request->mobile, 'password' => $request->password])){
             if(Session::has('oldUrl')){
+                dd(1);
                 $oldUrl = Session::get('oldUrl');
                 Session::forget('oldUrl');
                 return redirect()->to($oldUrl);

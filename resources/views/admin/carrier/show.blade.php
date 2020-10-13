@@ -10,15 +10,15 @@
     </div>
     
     <div class="x_content">
-        <table class="table">
+        <table class="table table-striped">
+          <tr>
             <th>Designation</th>
             <td>{{ $carrier->designation }}</td>
-            <th>Educational Qualification</th>
-            <td>{{ $carrier->educational_qualification }}</td>
-            <th>Work Experience</th>
-            <td>{{ $carrier->work_experience }}</td>
-            <th>Role and Responsibilty</th>
-            <td>{!! $carrier->role !!}</td>
+          </tr>
+          <tr>
+              <th>Role and Responsibilty</th>
+              <td>{!! $carrier->role !!}</td>
+          </tr>
         </table>
         <button class="btn btn-danger pull-right" onclick="window.close()">Close</button>
     </div>

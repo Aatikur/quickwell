@@ -17,15 +17,11 @@ class CarrierController extends Controller
     public function store(Request $request){
         $this->validate($request, [
             'designation'  => 'required',
-            'educational_qualification' => 'required',
-            'work_experience'   => 'required',
             'role'   => 'required'
         ]);
 
         $carrier = new Carrier;
         $carrier->designation = $request->input('designation');
-        $carrier->educational_qualification = $request->input('educational_qualification');
-        $carrier->work_experience = $request->input('work_experience');
         $carrier->role = $request->input('role');
 
         if($carrier->save()){

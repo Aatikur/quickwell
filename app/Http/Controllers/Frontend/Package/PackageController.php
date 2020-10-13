@@ -11,12 +11,7 @@ use Softon\Indipay\Facades\Indipay;
 
 class PackageController extends Controller
 {
-    public function showPackage($id) {
-        try {
-            $id = decrypt($id);
-        }catch(DecryptException $e) {
-            return redirect()->back();
-        }
+    public function showPackage($slug, $id) {
         $package = Package::find($id);
         return view('web.package.package_detail', compact('package'));
     }
@@ -28,17 +23,21 @@ class PackageController extends Controller
             'days'      => 'required'
         ]);
         $total = ($request->input('days') * $request->input('amount'));
+        $sub_total = $total;
         $gst = ($total * 18)/100;
-        $total =+ $gst;
+        $total += $gst;
         $orders = new Order;
         $orders->package_name = $request->input('package_name');
         $orders->full_name = $request->input('full_name');
         $orders->days = $request->input('days');
         $orders->mobile = $request->input('mobile');
+        $orders->email = $request->input('email');
+        $orders->address = $request->input('address');
         $orders->expires_at = Carbon::parse($request->input('date'))->addDays($request->input('days'));
-        $orders->amount = $total;
-        $total->gst = $gst;
-        $total->package_rate = $request->input('amount');
+        $orders->sub_total = $sub_total;
+        $orders->total = $total;
+        $orders->gst = $gst;
+        $orders->package_rate = $request->input('amount');
         $transaction_no = $this->getTransactionID();
         if($orders->save()){
             $parameters = [
@@ -57,9 +56,7 @@ class PackageController extends Controller
               return Indipay::process($order);
         }
     }
-    public function invoice() {
-        return view('web.other.invoice');
-    }
+   
     public function response(Request $request){
         $order_id = $request->session()->get('order_id');
         $order = Order::where('order_id', $order_id)->first();
@@ -67,13 +64,24 @@ class PackageController extends Controller
         if($order){
             $response = Indipay::response($request);
             if($response['status'] == "success" && $response['unmappedstatus'] == "captured"){
-                return view('web.payment.response', compact('response'));
+                $order->status = '1';
+                $order->save();
+                return view('web.payment.response', compact('response', 'order'));
             }else{
-                return view('web.payment.response', compact('response'));
+                return view('web.payment.response', compact('order'));
             }
         }
     }  
 
+    public function invoice($id) {
+        try{
+            $id = decrypt($id);
+        }catch(DecryptException $e) {
+            abort(404);
+        }
+        $order = Order::find($id);
+        return view('web.other.invoice', compact('order'));
+    }
     public function PackageCancel(){
         dd('Payment Cancel!');
     }

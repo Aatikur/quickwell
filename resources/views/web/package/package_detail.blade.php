@@ -66,7 +66,7 @@
                                 <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
                                     <div class="contect_form1 dc_cont_div">
                                         <label for="">Start From</label>
-                                        <input type="date" name="date" value="{{ old('date') }}" placeholder="Date" class="require">
+                                        <input type="date" name="date" id="date" value="{{ old('date') }}" placeholder="Date" class="require">
                                         @if($errors->has('date'))
                                             <span class="invalid-feedback" role="alert" style="color:red">
                                                 <strong>{{ $errors->first('date') }}</strong>
@@ -181,5 +181,20 @@
     @endsection
 
     @section('script') 
+        <script>
+            $(function(){
+                var dtToday = new Date();
+                var month = dtToday.getMonth() + 1;
+                var day = dtToday.getDate();
+                var year = dtToday.getFullYear();
+                if(month < 10)
+                    month = '0' + month.toString();
+                if(day < 10)
+                    day = '0' + day.toString();
+                
+                var maxDate = year + '-' + month + '-' + day;
+                $('#date').attr('min', maxDate);
+                });
+        </script>
     @endsection
 	

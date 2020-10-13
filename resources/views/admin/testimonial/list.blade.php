@@ -19,8 +19,9 @@
             <thead>
               <tr>
                 <th>Sl. No</th>
+                <th>Patient Name</th>
+                <th>Address</th>
                 <th>Image</th>
-                <th>Descripttion</th>
                 <th>Action</th>
               </tr>
             </thead>
@@ -42,8 +43,9 @@
                 ajax: "{{ route('admin.ajax.testimonial_list') }}",
                 columns: [
                     { "render": function(data, type, full, meta) {return i++;}},
+                    {data: 'name', name: 'name',searchable: true},
+                    {data: 'address', name: 'address',searchable: true},
                     {data: 'image', name: 'image',searchable: true},
-                    {data: 'desc', name: 'desc',searchable: true},
                     {data: 'action', name: 'action',searchable: true},
                 ]
             });

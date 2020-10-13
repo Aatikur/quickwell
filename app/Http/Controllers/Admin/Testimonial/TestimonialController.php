@@ -17,6 +17,7 @@ class TestimonialController extends Controller
 
     public function store(Request $request){
         $this->validate($request, [
+            'name' => 'required',
             'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
             'desc' => 'required'
         ]);
@@ -36,6 +37,8 @@ class TestimonialController extends Controller
         }
 
         $testimonial = new Testimonial;
+        $testimonial->name = $request->input('name');
+        $testimonial->address = $request->input('address');
         $testimonial->image = $image_name;
         $testimonial->desc = $request->input('desc');
 
@@ -93,6 +96,7 @@ class TestimonialController extends Controller
 
     public function update(Request $request){
         $this->validate($request, [
+            'name' => 'required',
             'desc' => 'required'
         ]);
         $id = $request->input('id');
@@ -152,6 +156,8 @@ class TestimonialController extends Controller
         }
 
         $testimonial = Testimonial::find($id);
+        $testimonial->name = $request->input('name');
+        $testimonial->address = $request->input('address');
         $testimonial->desc = $request->input('desc');
         if($testimonial->save()){
             return redirect()->back()->with('message', 'Testimonial Updated Successfully!');

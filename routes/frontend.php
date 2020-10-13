@@ -8,12 +8,12 @@ Route::group(['namespace' => 'Frontend'], function () {
     Route::get('/', 'FrontendController@index')->name('web.index');
     // Package
     Route::group(['namespace' => 'Package'], function () {
-        Route::get('/package-detail/{id}', 'PackageController@showPackage')->name('web.package.package_detail');
+        Route::get('/package-detail/{slug}/{id}', 'PackageController@showPackage')->name('web.package.package_detail');
 
         Route::group(['middleware' => 'auth:web'], function () {
             Route::post('/book/package/', 'PackageController@bookPackage')->name('web.package_book');
             Route::post('payumoney/response', 'PackageController@response')->name('web.payment.response');
-            Route::get('/Invoice', 'PackageController@invoice')->name('web.package.invoice');
+            Route::get('response/invoice/{id}', 'PackageController@invoice')->name('web.package.invoice');
         });
     });
     // Login
@@ -36,9 +36,17 @@ Route::group(['namespace' => 'Frontend'], function () {
     Route::group(['namespace' => 'Profile'], function () {
         Route::get('/account', 'ProfileController@index')->name('web.account.account');    
     });
+
+    // ========== Career =========
+    Route::group(['namespace' => 'Career'], function () {
+        Route::get('/Career', 'CareerController@index')->name('web.career.career');
+        Route::post('/job/openings', 'CareerController@job')->name('web.job_openings');
+    });
+    // ========== Testimonial =========
+    Route::group(['namespace' => 'Testimonial'], function () {
+        Route::get('/Testimonial', 'TestimonialController@index')->name('web.testimonial.testimonial');
+    });
 });
-
-
 
 // ========== Forgot Password =========
 Route::get('/Forgot-password', function () {
@@ -71,10 +79,7 @@ Route::get('/Blog', function () {
 
 
 
-// ========== Career =========
-Route::get('/Career', function () {
-    return view('web.career.career');
-})->name('web.career.career');
+
 
 // ========== Team =========
 Route::get('/Team', function () {
@@ -86,10 +91,7 @@ Route::get('/Faq', function () {
     return view('web.faq.faq');
 })->name('web.faq.faq');
 
-// ========== Testimonial =========
-Route::get('/Testimonial', function () {
-    return view('web.testimonial.testimonial');
-})->name('web.testimonial.testimonial');
+
 
 
 // ========== Terms&Condition =========
@@ -107,4 +109,7 @@ Route::get('/Privacy', function () {
     return view('web.other.privacy');
 })->name('web.other.privacy');
 
-// ========== Invoice =========
+// ========== Privacy =========
+Route::get('/Response', function () {
+    return view('web.payment.response');
+})->name('web.payment.response');

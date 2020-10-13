@@ -19,12 +19,34 @@
           <form class="form-horizontal" method="POST" action="{{ route('admin.store_testimonial') }}" enctype="multipart/form-data">
             {{ csrf_field() }}
             <div class="form-group{{ $errors->has('image') ? ' has-error' : '' }}">
-                <label for="image" class="col-md-2 control-label">Image Upload</label>
+                <label for="image" class="col-md-2 control-label">Profile Image Upload</label>
                 <div class="col-md-10">
                     <input type="file" class="form-control" name="image" accept="/*" required>
                     @if ($errors->has('image'))
                         <span class="help-block">
                             <strong>{{ $errors->first('image') }}</strong>
+                        </span>
+                    @endif
+                </div>
+            </div>
+            <div class="form-group{{ $errors->has('name') ? ' has-error' : '' }}">
+                <label for="name" class="col-md-2 control-label">Name</label>
+                <div class="col-md-10">
+                    <input type="text" class="form-control" name="name" value="{{ old('name') }}" placeholder="Enter Patient Name" required>
+                    @if ($errors->has('name'))
+                        <span class="help-block">
+                            <strong>{{ $errors->first('name') }}</strong>
+                        </span>
+                    @endif
+                </div>
+            </div>
+            <div class="form-group{{ $errors->has('address') ? ' has-error' : '' }}">
+                <label for="address" class="col-md-2 control-label">Address</label>
+                <div class="col-md-10">
+                    <input type="text" class="form-control" name="address" value="{{ old('address') }}" placeholder="Enter Patient Address" required>
+                    @if ($errors->has('address'))
+                        <span class="help-block">
+                            <strong>{{ $errors->first('address') }}</strong>
                         </span>
                     @endif
                 </div>
