@@ -29,6 +29,7 @@ Route::group(['namespace' => 'Frontend'], function () {
     });
     // Blog
     Route::group(['namespace' => 'Blog'], function () {
+        Route::get('/Blog', 'BlogsController@index')->name('web.blog.blog');
         Route::get('/posts/{slug}/{id}', 'BlogsController@showPost')->name('web.single_post');
     });
 
@@ -46,12 +47,13 @@ Route::group(['namespace' => 'Frontend'], function () {
     Route::group(['namespace' => 'Testimonial'], function () {
         Route::get('/Testimonial', 'TestimonialController@index')->name('web.testimonial.testimonial');
     });
+    
+    // ========== Forgot Password =========
+    Route::group(['namespace' => 'ForgetPassword'], function () {
+        Route::get('/Forgot-password', 'ForgetPasswordController@index')->name('web.password.forgot-pasword');
+        Route::post('send/forgot-password', 'ForgetPasswordController@send')->name('web.user.forgot_password');
+    });
 });
-
-// ========== Forgot Password =========
-Route::get('/Forgot-password', function () {
-    return view('web.password.forgot-pasword');
-})->name('web.password.forgot-pasword');
 
 // ========== Confirm Password =========
 Route::get('/Confirm-password', function () {
@@ -72,10 +74,7 @@ Route::get('/Doctor_on_wall', function () {
     return view('web.doctor_on_call.doctor_on_call');
 })->name('web.doctor_on_call.doctor_on_call');
 
-// ========== Blog =========
-Route::get('/Blog', function () {
-    return view('web.blog.blog');
-})->name('web.blog.blog');
+
 
 
 

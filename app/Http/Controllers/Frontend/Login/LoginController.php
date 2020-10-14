@@ -15,10 +15,10 @@ class LoginController extends Controller
 
     public function userLogin(Request $request){
         $this->validate($request, [
-            'mobile' => 'required|numeric',
+            'email' => 'required|numeric',
             'password' => 'required'
         ]);
-        if (Auth::guard('web')->attempt(['mobile' => $request->mobile, 'password' => $request->password])){
+        if (Auth::guard('web')->attempt(['email' => $request->email, 'password' => $request->password])){
             if(Session::has('oldUrl')){
                 dd(1);
                 $oldUrl = Session::get('oldUrl');
@@ -27,7 +27,7 @@ class LoginController extends Controller
             }
             return redirect()->intended('/');
         }
-        return back()->withInput($request->only('mobile', 'remember'))->with('error','Mobile or password is incorrect!');
+        return back()->withInput($request->only('email', 'remember'))->with('error','Email or password is incorrect!');
     }
 
     public function logout(Request $request, Guard $guard)

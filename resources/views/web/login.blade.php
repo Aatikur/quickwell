@@ -47,13 +47,23 @@
                                 {{ Form::open(['method' => 'post','route'=>'web.user.login']) }}
                                     <div class="formsix-pos">
                                         <div class="form-group i-email">
-                                            <input type="number" class="form-control" name="mobile" value="{{ old('mobile') }}" required="" placeholder="Mobile No">
+                                            <input type="email" class="form-control" name="email" value="{{ old('email') }}" required="" placeholder="Email">
+                                            @if($errors->has('email'))
+                                                <span class="help-block">
+                                                    <strong>{{ $errors->first('email') }}</strong>
+                                                </span>
+                                            @endif
                                         </div>
                                     </div>
 
                                     <div class="formsix-e">
                                         <div class="form-group i-password">
-                                            <input type="password" class="form-control" required="" name="password" id="password2" placeholder="Password *">
+                                            <input type="password" class="form-control" required="" name="password" id="password2" placeholder="Password">
+                                            @if($errors->has('password'))
+                                                <span class="help-block">
+                                                    <strong>{{ $errors->first('password') }}</strong>
+                                                </span>
+                                            @endif
                                         </div>
                                     </div>
 

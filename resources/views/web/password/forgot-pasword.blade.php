@@ -36,19 +36,25 @@
                     <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12 mx-auto">
                         <div class="login_tab_top_wrap float_left">
                             <div class="btn_log">
-                                <a href="#">FORGOT PASSWORD </a>
+                                <a href="{{ route('web.password.forgot-pasword') }}">FORGOT PASSWORD </a>
                             </div>
 
                             <div class="login_wrapper  float_left">
-
-                                <div class="formsix-pos">
-                                    <div class="form-group i-email">
-                                        <input type="text" class="form-control" required="" placeholder="Username*">
+                                {{ Form::open(['method' => 'post','route'=>'web.user.forgot_password']) }}
+                                    <div class="formsix-pos">
+                                        <div class="form-group i-email">
+                                            <input type="email" name="email" class="form-control" required="" placeholder="Email">
+                                            @if($errors->has('email'))
+                                                <span class="help-block">
+                                                    <strong>{{ $errors->first('email') }}</strong>
+                                                </span>
+                                            @endif
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="header_btn inner_btn login_btn log float_left">
-                                    <a href="#">Submit</a>
-                                </div>
+                                    <div class="header_btn inner_btn login_btn log float_left">
+                                        <button type="submit">Submit</button>
+                                    </div>
+                                </form>
                             </div>
                         </div>
                     </div>
