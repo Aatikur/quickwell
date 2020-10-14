@@ -6,35 +6,34 @@
      <!-- top tiles -->
      <div class="row tile_count">
       <div class="col-md-3 col-sm-4 col-xs-6 tile_stats_count" style="text-align: center">
-        <span class="count_top"><i class="fa fa-user"></i> Total Customers</span>
-        <div class="count green">10</div>
+        <span class="count_top"><i class="fa fa-user"></i> Total User</span>
+        <div class="count green">{{ $user }}</div>
       </div>
       <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count"  style="text-align: center">
-        <span class="count_top"><i class="fa fa-clock-o"></i> Total Retailers</span>
-        <div class="count green">10</div>
+        <span class="count_top"><i class="fa fa-clock-o"></i> Total Order</span>
+        <div class="count green">{{ $order }}</div>
       </div>
       <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count"  style="text-align: center">
-          <span class="count_top"><i class="fa fa-user"></i> Total Products</span>
-          <div class="count green">10</div>
+          <span class="count_top"><i class="fa fa-user"></i> Total Testimonial</span>
+          <div class="count green">{{ $testimonial }}</div>
       </div>
       <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count"  style="text-align: center">
-        <span class="count_top"><i class="fa fa-user"></i> Total Categories</span>
-        <div class="count green">10</div>
+        <span class="count_top"><i class="fa fa-user"></i> Total Applicant</span>
+        <div class="count green">{{ $applicant }}</div>
       </div>
       <div class="col-md-3 col-sm-4 col-xs-6 tile_stats_count"  style="text-align: center">
-        <span class="count_top"><i class="fa fa-user"></i> Total New Orders</span>
-        <div class="count green">10</div>
+        <span class="count_top"><i class="fa fa-user"></i> Total Blog Post</span>
+        <div class="count green">{{ $blog }}</div>
       </div>
       
     </div> 
     <!-- /top tiles -->
 
   <div class="row">
-
-    {{-- <div class="col-md-12">
+    <div class="col-md-12">
       <div class="x_panel">
         <div class="x_title">
-            <h2>Category List</h2>
+            <h2>Order List</h2>
             <div class="clearfix"></div>
         </div>
         <div>
@@ -44,35 +43,41 @@
               <thead>
                 <tr>
                     <th>SL No.</th>
-                    <th>Slot Number</th>
-                    <th>Number</th>
-                    <th>Action</th>
+                    <th>Order ID</th>
+                    <th>Package Name</th>
+                    <th>Days</th>
+                    <th>Name</th>
+                    <th>Mobile</th>
                 </tr>
               </thead>
               <tbody class="form-text-element">
-                  @if (isset($slots) && !empty($slots))
+                  @if(isset($orders) && !empty($orders))
                     @php
                         $count = 1;
                     @endphp
-                      @foreach ($slots as $item)
-                        <tr>
-                          <td>{{$count++}}</td>
-                          <td>{{$item->slot_no}}</td>
-                          <td>{{$item->number}}</td>
-                          <td>
-                          <a class="btn btn-warning" href="{{route('admin.slot_edit',['slot_id'=>$item->id])}}">Edit</a>
-                          <a class="btn btn-danger" href="{{route('admin.slot_delete',['slot_id'=>$item->id])}}">Delete</a>
-                          </td>
-                        </tr>
-                      @endforeach
+                    @foreach ($orders as $order)
+                    <tr>
+                        <td>{{$count++}}</td>
+                        <td>{{$order->order_id}}</td>
+                        <td>{{$order->package_name}}</td>
+                        <td>{{ $order->days }}</td>
+                        <td>{{ $order->full_name }}</td>
+                        <td>{{ $order->mobile }}</td>
+                    </tr>
+                    @endforeach
+                  @else
+                    <tr>
+                        <td colspan="6" class="text-center">No Orders Found</td>
+                    </tr>
                   @endif
               </tbody>
             </table>
+            <a href="{{ route('admin.order') }}" class="btn btn-primary pull-right">Show More...</a>
             </div>
           </div>
         </div>
       </div>
-    </div> --}}
+    </div>
   </div>
 </div>
  @endsection

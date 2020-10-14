@@ -114,7 +114,7 @@
                       <ul class="nav child_menu">
                         <li><a href="{{ route('admin.carrier')}}">Post Job Openings</a></li>
                         <li><a href="{{ route('admin.carrier_list')}}">Job Openings</a></li>
-                        <li><a href="{{ route('admin.carrier')}}">Applicant List</a></li>
+                        <li><a href="{{ route('admin.applicant')}}">Applicant List</a></li>
                       </ul>
                   </li>
                   <li>

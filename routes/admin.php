@@ -66,5 +66,13 @@ Route::group(['namespace' => 'Admin'],function(){
             Route::get('/user/list', 'UserController@show')->name('admin.ajax.user_list');
             Route::get('/user/delete/{id}', 'UserController@destroyUser')->name('admin.delete_user');
         });
+
+        // Applicant
+        Route::group(['namespace' => 'Applicant'], function () {
+            Route::get('/applicant', 'ApplicantController@index')->name('admin.applicant');
+            Route::get('/application/list', 'ApplicantController@show')->name('admin.show');
+            Route::get('/show/application', 'ApplicantController@showApplicant')->name('admin.ajax.show_applicant');
+            Route::get('/delete/applicant/{id}', 'ApplicantController@destroyApplicant')->name('admin.delete_applicant');
+        });
     });   
 });
