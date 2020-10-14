@@ -86,13 +86,13 @@
                   <li>
                       <a><i class="fa fa-users" aria-hidden="true"></i> User <span class="fa fa-chevron-down"></span></a>
                       <ul class="nav child_menu">
-                        <li><a href="{{ route('admin.carrier')}}">All Users</a></li>
+                        <li><a href="{{ route('admin.user')}}">All Users</a></li>
                       </ul>
                   </li>
                   <li>
                       <a><i class="fa fa-first-order" aria-hidden="true"></i> Order <span class="fa fa-chevron-down"></span></a>
                       <ul class="nav child_menu">
-                        <li><a href="{{ route('admin.carrier')}}">All Orders</a></li>
+                        <li><a href="{{ route('admin.order')}}">All Orders</a></li>
                       </ul>
                   </li>
                   {{-- <li>

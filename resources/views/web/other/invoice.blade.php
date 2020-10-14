@@ -80,7 +80,7 @@
                 <div class="row justify-content-end">
                     <div class="col-md-6">
                         <strong>GST</strong>: 18% <br>
-                        <strong>Expiration date</strong>: {{ $order->expires_at }}<br>
+                        {{-- <strong>Expiration date</strong>: {{ $order->expires_at }}<br> --}}
                         <strong>Payment Status</strong>: Paid <br>
                         <strong>Purchased on</strong> {{ $order->created_at }} at 18:02 <br>
                     </div>

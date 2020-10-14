@@ -64,7 +64,7 @@
 
                                     <div class="row profile">
                                         <div class="col-md-6 mb-3">
-                                            <h3><strong>Package Start Date:</strong> {{ $order->created_at }}</h3>
+                                            <h3><strong>Purchased On:</strong> {{ $order->created_at }}</h3>
                                         </div>
                                         <div class="col-md-6 mb-3">
                                             <h3><strong>Package Amount:</strong> ₹{{ number_format($order->package_rate, 2) }} / per Day</h3>

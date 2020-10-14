@@ -51,13 +51,20 @@ Route::group(['namespace' => 'Admin'],function(){
             Route::post('ck-editor-image-upload','BlogsController@ckEditorImageUpload')->name('admin.ck_editor_image_upload');
         });
         
-        // Package
-        // Route::group(['namespace' => 'Package'], function () {
-            //     Route::get('/package', 'PackageController@index')->name('admin.package');
-            //     Route::get('/package/list', 'PackageController@show')->name('admin.package_list');
-            //     Route::post('/store/package', 'PackageController@store')->name('admin.store_package');
-            //     Route::get('/show/package', 'PackageController@showPackage')->name('admin.ajax.show_package');
-            //     Route::get('/package/status/{id}/{status}', 'PackageController@statusPackage')->name('admin.status');
-        // });
+        // Order
+        Route::group(['namespace' => 'Order'], function () {
+            Route::get('/order', 'OrderController@index')->name('admin.order');
+            Route::get('/order/list', 'OrderController@show')->name('admin.ajax.order_list');
+            Route::get('/show/order/{id}', 'OrderController@showOrder')->name('admin.show_order');
+            Route::get('/order/invoice/{id}', 'OrderController@orderInvoice')->name('admin.order_invoice');
+            Route::get('/delete/order/{id}', 'OrderController@destroyOrder')->name('admin.delete_order');
+        });
+
+        // User
+        Route::group(['namespace' => 'User'], function () {
+            Route::get('/user', 'UserController@index')->name('admin.user');
+            Route::get('/user/list', 'UserController@show')->name('admin.ajax.user_list');
+            Route::get('/user/delete/{id}', 'UserController@destroyUser')->name('admin.delete_user');
+        });
     });   
 });
