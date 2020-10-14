@@ -81,7 +81,7 @@
                                             @php
                                                 $date = Carbon\Carbon::parse($order->expires_at);
                                                 $now = Carbon\Carbon::now();
-                                                $usage = $date->diffInDays($now);
+                                                $usage = $date->diffInDays($now + 1);
                                             @endphp
                                             @if(!empty($usage))
                                                 <button class="btn btn-success">
