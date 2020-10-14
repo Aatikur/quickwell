@@ -74,5 +74,12 @@ Route::group(['namespace' => 'Admin'],function(){
             Route::get('/show/application', 'ApplicantController@showApplicant')->name('admin.ajax.show_applicant');
             Route::get('/delete/applicant/{id}', 'ApplicantController@destroyApplicant')->name('admin.delete_applicant');
         });
+        
+        // GetInTouch
+        Route::group(['namespace' => 'GetInTouch'], function() {
+            Route::get('/get/in/touch', 'GetInTouchController@index')->name('admin.getintouch');
+            Route::get('/show/in/touch', 'GetInTouchController@show')->name('admin.ajax.show_getintouch');
+            Route::get('/delete/get/in/touch/{id}', 'GetInTouchController@destroyGetInTouch')->name('admin.delete_getintouch');
+        });
     });   
 });

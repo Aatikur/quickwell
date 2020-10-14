@@ -291,49 +291,40 @@
             </div>
             <div class="container">
 
-                <form class="booking_box">
+                <form class="booking_box" method="POST" id="form-submit" name="form-submit">
                     <div class="box_side_icon">
                         <img src="{{asset('web/images/Icon_bk.png')}}" alt="img">
+                        <div id="alert"></div>   
                         <div class="row">
-                            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12  col-12">
+                            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12  col-12">
                                 <div class="contect_form1">
-                                    <input type="text" name="full_name" placeholder="Full Name" class="require">
+                                    <input type="text" name="full_name" id="full_name" required placeholder="Full Name" class="require">
                                 </div>
                             </div>
                             <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12  col-12">
                                 <div class="contect_form1">
-                                    <input type="text" name="email" placeholder="Email" class="require" data-valid="email" data-error="Email should be valid.">
+                                    <input type="email" name="email" id="email" required placeholder="Email" class="require" data-valid="email" data-error="Email should be valid.">
                                 </div>
                             </div>
                             <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12  col-12">
                                 <div class="contect_form1">
-                                    <input type="text" name="city" placeholder="city" class="require">
+                                    <input type="text" name="city" id="city" required placeholder="city" class="require">
                                 </div>
                             </div>
                             <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12  col-12">
                                 <div class="contect_form1">
-                                    <input type="text" name="contact_no" placeholder="Phone" class="require">
-                                </div>
-                            </div>
-                            <div class="col-xl-2 col-lg-2 col-md-2 col-sm-12  col-12">
-                                <div class="verify">
-                                    <button type="button" class="btn">Verify</button>
-                                </div>
-                            </div>
-                            <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12  col-12">
-                                <div class="contect_form1">
-                                    <input type="text" name="v-code" placeholder="Otp" class="inactive">
+                                    <input type="number" name="mobile" id="mobile" required placeholder="Phone" class="require">
                                 </div>
                             </div>
                             <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12  col-12">
                                 <div class="contect_form4">
-                                    <textarea rows="4" name="message" placeholder="Message" class="require"></textarea>
+                                    <textarea rows="4" name="message" id="message" placeholder="Message" class="require"></textarea>
                                 </div>
                             </div>
                             <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12  col-12">
                                 <div class="response"></div>
                                 <div class="contect_btn">
-                                    <button type="button" class="submitForm">Send a Message</button>
+                                    <button class="submitForm">Send a Message</button>
                                 </div>
                             </div>
                         </div>
@@ -370,5 +361,43 @@
     @endsection
 
     @section('script') 
+        <script>
+             $(function(){
+               
+               $('#form-submit').on('submit', function(e){
+                   e.preventDefault();
+                   var data = $(this).serializeArray();
+                   $.ajaxSetup({
+                       headers: {
+                           'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                       }
+                   });
+                   $.ajax({
+                       url: "{{route('web.ajax.getintouch')}}",
+                       method: "POST",
+                       data: data,
+                       success: function(response){
+                           var html = '';
+                           if(response.errors)
+                           {
+                               html = '<div class="alert alert-danger">';
+                               for(var count = 0; count < response.errors.length; count++){
+                                   html += '<p>' + response.errors[count] + '</p>';
+                               }
+                               html += '</div>';
+                           }
+                           if(response.success){
+                               html = '<div class="alert alert-success">' + response.success + '</div>';
+                               $('#form-submit')[0].reset();
+                           }
+                           if(response.error){
+                               html = '<div class="alert alert-danger">' + response.error + '</div>';
+                           }
+                           $("#alert").html(html);
+                       }
+                   });
+               });
+           });
+        </script>
     @endsection
 	

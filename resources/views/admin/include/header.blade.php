@@ -95,6 +95,9 @@
                         <li><a href="{{ route('admin.order')}}">All Orders</a></li>
                       </ul>
                   </li>
+                  <li>
+                      <a href="{{ route('admin.getintouch') }}"><i class="fa fa-phone" aria-hidden="true"></i> Get In Touch </a>
+                  </li>
                   {{-- <li>
                       <a><i class="fa fa-gift" aria-hidden="true"></i> Package <span class="fa fa-chevron-down"></span></a>
                       <ul class="nav child_menu">
