@@ -49,8 +49,8 @@
                                         <div class="form-group i-email">
                                             <input type="text" class="form-control" name="name" value="{{ old('name') }}" required="" placeholder="Enter Full Name">
                                             @if($errors->has('name'))
-                                                <span class="invalid-feedback" role="alert" style="color:red">
-                                                    <strong>{{ $errors->first('name') }}</strong>
+                                                <span class="invalid-feedback" role="alert">
+                                                    <strong style="color:red">{{ $errors->first('name') }}</strong>
                                                 </span>
                                             @enderror
                                         </div>
@@ -58,16 +58,16 @@
                                     <div class="form-group">
                                         <input type="email" class="form-control" name="email" value="{{ old('email') }}" placeholder="Enter Email">
                                         @if($errors->has('email'))
-                                            <span class="invalid-feedback" role="alert" style="color:red">
-                                                <strong>{{ $errors->first('email') }}</strong>
+                                            <span class="invalid-feedback" role="alert">
+                                                <strong style="color:red">{{ $errors->first('email') }}</strong>
                                             </span>
                                         @enderror
                                     </div>
                                     <div class="form-group">
                                         <input type="number" class="form-control" name="mobile" value="{{ old('mobile') }}" placeholder="Enter Mobile No">
                                         @if($errors->has('mobile'))
-                                            <span class="invalid-feedback" role="alert" style="color:red">
-                                                <strong>{{ $errors->first('mobile') }}</strong>
+                                            <span class="invalid-feedback" role="alert" >
+                                                <strong style="color:red">{{ $errors->first('mobile') }}</strong>
                                             </span>
                                         @enderror
                                     </div>
@@ -75,8 +75,8 @@
                                         <div class="form-group i-password">
                                             <input type="password" class="form-control" name="password" required="" id="password" placeholder="Enter Password">
                                             @if($errors->has('password'))
-                                                <span class="invalid-feedback" role="alert" style="color:red">
-                                                    <strong>{{ $errors->first('password') }}</strong>
+                                                <span class="invalid-feedback" role="alert" >
+                                                    <strong style="color:red">{{ $errors->first('password') }}</strong>
                                                 </span>
                                             @enderror
                                         </div>
