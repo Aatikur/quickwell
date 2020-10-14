@@ -68,15 +68,14 @@
                                     </div>
 
                                     <div class="login_remember_box">
-                                        <label class="control control--checkbox">Remember me
-                                            <input type="checkbox" name="remember"  {{ old('remember') ? 'checked' : '' }}>
-                                            <span class="control__indicator"></span>
-                                        </label>
+                                        
+                                        <p style="display: inline;">If your are not resigter <a href="{{ route('web.register') }}">click here</a></p>
                                         <a href="{{route('web.password.forgot-pasword')}}" class="forget_password">Forgot Password</a>
                                     </div>
                                     <div class="header_btn inner_btn login_btn log float_left">
                                         <button type="submit">Log in</button>
                                     </div>
+                                    
                                 </form>
                             </div>
                         </div>
