@@ -15,7 +15,7 @@ class LoginController extends Controller
 
     public function userLogin(Request $request){
         $this->validate($request, [
-            'email' => 'required|numeric',
+            'email' => 'required|email',
             'password' => 'required'
         ]);
         if (Auth::guard('web')->attempt(['email' => $request->email, 'password' => $request->password])){
