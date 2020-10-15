@@ -20,7 +20,7 @@
                                 Due: {{ $order->expires_at }}
                             </div>
                             <div class="col-md-4 pull-right">
-                                <img src="{{asset('web/images/logo2.png')}}" alt="logo" class="" style="max-width: 100px;">
+                                <img src="{{asset('web/images/logo_invoice.png')}}" alt="logo" class="" style="max-width: 100px;">
                             </div>
                         </div>
                     </div>
