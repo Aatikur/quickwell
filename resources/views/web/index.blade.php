@@ -353,7 +353,7 @@
                 </div>
             </div>
             <div class="map_main_wrapper">
-                <div id="map" style="width:100%; float:left; height:600px;"></div>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14026.257501388622!2d77.0060658!3d28.492663!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x1160f592af6358a0!2sQuickwell%20Remedy%20Healthcare%20Private%20Limited!5e0!3m2!1sen!2sin!4v1602763963342!5m2!1sen!2sin" height="450" frameborder="0" style="border:0;width:100%" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
             </div>
         </div>
         <!--booking wrapper end-->

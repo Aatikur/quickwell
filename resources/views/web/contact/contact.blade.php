@@ -29,14 +29,13 @@
         <!-- med_tittle_section End-->
 
         <!--contact us section start -->
-        <div class="contact_us_section med_toppadder100 med_bottompadder70">
+        <div class="contact_us_section med_toppadder70 med_bottompadder70">
             <div class="container">
                 <div class="row">
                     <div class="col-xl-8 col-lg-8 col-md-12 col-sm-12 col-12">
                         <div class="choose_heading_wrapper med_bottompadder30">
                             <h1 class="med_bottompadder20">Contact us</h1>
                             <img src="{{asset('web/images/line.png')}}" alt="title" class="med_bottompadder20">
-                            <p>Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate.</p>
                         </div>
 
                         <form>
@@ -91,12 +90,12 @@
                     <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12 col-12">
                         <div class="cat_about cont_cat_abt">
                             <div class="icon_wrapper dc_icon_section">
-                                <img src="{{asset('web/images/icon_map.png')}}" alt="img" class="img-responsive">
+                                <img src="{{asset('web/images/icon_call.png')}}" alt="img" class="img-responsive">
                             </div>
 
                             <div class="cat_txt cont_cat_txt">
-                                <h1>22, margatnet. 2020</h1>
-                                <p>Marylebone,London</p>
+                                <h1 style="text-transform: capitalize">PHONE</h1>
+                                <p>1800-419-4948 | +91-8797071501</p>
 
                             </div>
                         </div>
@@ -104,12 +103,12 @@
                     <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12 col-12">
                         <div class="cat_about cont_cat_abt">
                             <div class="icon_wrapper dc_icon_section">
-                                <img src="{{asset('web/images/icon_call.png')}}" alt="img" class="img-responsive">
+                                <img src="{{asset('web/images/icon_map.png')}}" alt="img" class="img-responsive">
                             </div>
 
                             <div class="cat_txt cont_cat_txt">
-                                <h1>+1800 1256-12365</h1>
-                                <p>Mon-Fri 8:30am - 9:30pm</p>
+                                <p>103, Janak Palace, Manglam Enclave, <br> RPS more Bailey Road, Patna- 801503</p>
+                                <p>H.Off: F NO 301, Block C, Rajendra Park, Sector 105, Gurugram, Haryana 122001</p>
 
                             </div>
                         </div>
@@ -121,8 +120,8 @@
                             </div>
 
                             <div class="cat_txt cont_cat_txt cont_last_child">
-                                <a href="#"><h1>dummy@exmaple.com</h1></a>
-                                <p>24 / 7online help support</p>
+                                <h1 style="text-transform: capitalize">EMAIL</h1>
+                                <a href="#"><p> info@quickwellhealthcare.com</p></a>
 
                             </div>
                         </div>
@@ -130,7 +129,7 @@
                 </div>
             </div>
             <div class="map_main_wrapper cont_dc_map">
-                <div id="map" style="width:100%; float:left; height:600px;"></div>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14026.257501388622!2d77.0060658!3d28.492663!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x1160f592af6358a0!2sQuickwell%20Remedy%20Healthcare%20Private%20Limited!5e0!3m2!1sen!2sin!4v1602763963342!5m2!1sen!2sin" height="450" frameborder="0" style="border:0;width:100%" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
             </div>
         </div>
         <!-- dc category section end-->

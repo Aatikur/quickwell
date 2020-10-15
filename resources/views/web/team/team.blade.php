@@ -51,7 +51,7 @@
                                             </div>
                                             <div class="img_wrapper1">
 
-                                                <img src="{{asset('web/images/event_1.jpg')}}" alt="img" class="img-responsive">
+                                                <img src="{{asset('web/images/team/1.jpg')}}" alt="img" class="img-responsive">
                                             </div>
                                             <div class="event_icon1">
                                                 <h2><a href="#">Dr. Ambika Prasad Singh</a></h2>
@@ -65,7 +65,7 @@
                                                 <i class="fa fa-star-o" aria-hidden="true"></i>
                                             </div>
                                             <div class="img_wrapper1">
-                                                <img src="{{asset('web/images/event_3.jpg')}}" alt="img" class="img-responsive">
+                                                <img src="{{asset('web/images/team/2.jpg')}}" alt="img" class="img-responsive">
                                             </div>
                                             <div class="event_icon1">
                                                 <h2><a href="#">Mr. Ambrish Mishra</a></h2>
@@ -84,7 +84,7 @@
                                             </div>
                                             <div class="img_wrapper1">
 
-                                                <img src="{{asset('web/images/event_1.jpg')}}" alt="img" class="img-responsive">
+                                                <img src="{{asset('web/images/team/3.jpg')}}" alt="img" class="img-responsive">
                                             </div>
                                             <div class="event_icon1">
                                                 <h2><a href="#">Mr. Narrotam Narayan Singh</a></h2>
@@ -98,7 +98,7 @@
                                                 <i class="fa fa-star-o" aria-hidden="true"></i>
                                             </div>
                                             <div class="img_wrapper1">
-                                                <img src="{{asset('web/images/event_3.jpg')}}" alt="img" class="img-responsive">
+                                                <img src="{{asset('web/images/team/4.jpg')}}" alt="img" class="img-responsive">
                                             </div>
                                             <div class="event_icon1">
                                                 <h2><a href="#">Mr. Ajay Kumar Singh</a></h2>
@@ -116,7 +116,7 @@
                                                 <i class="fa fa-star-o" aria-hidden="true"></i>
                                             </div>
                                             <div class="img_wrapper1">
-                                                <img src="{{asset('web/images/event_1.jpg')}}" alt="img" class="img-responsive">
+                                                <img src="{{asset('web/images/team/5.jpg')}}" alt="img" class="img-responsive">
                                             </div>
                                             <div class="event_icon1">
                                                 <h2><a href="#">Mrs. Priyanka Singh</a></h2>
@@ -130,7 +130,7 @@
                                                 <i class="fa fa-star-o" aria-hidden="true"></i>
                                             </div>
                                             <div class="img_wrapper1">
-                                                <img src="{{asset('web/images/event_3.jpg')}}" alt="img" class="img-responsive">
+                                                <img src="{{asset('web/images/team/6.jpg')}}" alt="img" class="img-responsive">
                                             </div>
                                             <div class="event_icon1">
                                                 <h2><a href="#">Mr. Saket Kumar</a></h2>

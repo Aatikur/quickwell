@@ -44,7 +44,7 @@
                             @if(Auth::guard('web')->check())
                                 <li>
                                     <i class="fa fa-user" aria-hidden="true"></i><a href="{{route('web.account.account')}}">Account</a> | 
-                                    <a href="#" onclick="event.preventDefault();document.getElementById('logout-form').submit();" style="padding-left:0"><i class="fa fa-sign-out pull-right"></i> Log Out</a>
+                                    <a href="#" onclick="event.preventDefault();document.getElementById('logout-form').submit();" style="padding-left:0"> Log Out</a>
                                     <form id="logout-form" action="{{ route('web.logout') }}" method="POST" style="display: none;">
                                         @csrf
                                     </form>    

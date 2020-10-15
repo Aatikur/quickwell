@@ -131,7 +131,6 @@
                             <div class="abt_block">
                                 <div class="abt_txt">
                                     <h3>{{ $count++ }}.	{{ $career->designation }}</h3>
-                                    <p class="sub_header med_toppadder20">Roles and Responsibilities </p>
                                 </div>
                                 <div class="">
                                     <div class="content">
