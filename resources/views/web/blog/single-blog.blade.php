@@ -42,7 +42,7 @@
                                             </figure>
                                         </div>
                                         <div class="blog_txt">
-                                            <h1><a href="#" style="color: #333">Very popular during</a></h1>
+                                            <h1><a href="#">{{ $single_post->title }}</a></h1>
                                             <div class="blog_txt_info">
                                                 <ul>
                                                     <li>WRITTEN ON: {{ date_format($single_post->created_at, 'M m, Y') }}</li>

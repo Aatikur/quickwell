@@ -42,7 +42,7 @@
                                         </figure>
                                     </div>
                                     <div class="blog_txt">
-                                        <h1><a href="{{route('web.single_post',['slug'=>urlencode($blog->slug),'id'=>$blog->id])}}">Blog Image Post</a></h1>
+                                        <h1><a href="{{route('web.single_post',['slug'=>urlencode($blog->slug),'id'=>$blog->id])}}">{{ $blog->title }}</a></h1>
                                         <div class="blog_txt_info">
                                             <ul>
                                                 <li>WRITTEN ON: {{ date_format($blog->created_at, 'M m, Y') }}</li>

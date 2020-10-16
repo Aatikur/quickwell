@@ -108,76 +108,42 @@
                             <img src="{{asset('web/images/Icon_team.png')}}" alt="line" class="med_bottompadder20">
                         </div>
                     </div>
-                    <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
-                        <div class="pricing_box1_wrapper">
-                            <div class="box1_heading_wrapper">
-                                <h1>Covid 19 Care <br>
-                                <small style="font-size: 60%;">(Covid19 Home Isolation and Quarantine)</small></h1>
-                            </div>
-                            <div class="price_box1_wrapper">
-                                <div class="price_box1">
-                                    <h1><sub>₹</sub><span>{{ $package1->amount }}</span></h1>
-                                    <p>/ per Day</p>
+                    @if (isset($packages) && !empty($packages))
+                        @foreach ($packages as $package)
+                            <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
+                                <div class="pricing_box1_wrapper">
+                                    <div class="box1_heading_wrapper">
+                                        <h1>{{ $package->name }}<br>
+                                        <small style="font-size: 60%;">(Covid19 Home Isolation and Quarantine)</small></h1>
+                                    </div>
+                                    <div class="price_box1_wrapper">
+                                        <div class="price_box1">
+                                            <h1><sub>₹</sub><span>{{ $package->amount }}</span></h1>
+                                            <p>/ per Day</p>
+                                        </div>
+                                    </div>
+                                    <div class="pricing_cont_wrapper">
+                                        <h1>features</h1>
+                                        <div class="pricing_cont">
+                                            {!! $package->feature !!}
+                                        </div>
+                                    </div>
+                                    <div class="pricing_btn_wrapper">
+                                        <div class="pricing_btn">
+                                            <ul>
+                                                <li><a href="{{route('web.package.package_detail',  ['slug'=>urlencode($package->slug), 'id'=> $package->id])}}">View Detail</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="pricing_cont_wrapper">
-                                <h1>features</h1>
-                                <div class="pricing_cont">
-                                    <ul>
-                                        <li>Oxygen Concentrator/ cylinder - 5 LIT. </li>
-                                        <li>Cardiac Monitor. </li>
-                                        <li>PPE KIT. </li>
-                                        <li>Medical Consumable – N95 Mask, Sanitizer, Gloves etc. </li>
-                                        <li>Nurse 24 Hours Stay. </li>
-                                        <li>Dr. Consultation – Online/ WhatsApp. </li>
-                                        <li>Essential Medical kit -Infrared Thermometer, Pulse Oximeter, Stethoscope, BP Machine, Steamer.</li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="pricing_btn_wrapper">
-                                <div class="pricing_btn">
-                                    <ul>
-                                        <li><a href="{{route('web.package.package_detail',  ['slug'=>urlencode($package1->slug), 'id'=> $package1->id])}}">View Detail</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
+                        @endforeach
+                    @else
+                        <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
+                            <h2 class="text-center">There's no Packages yet</h2>
                         </div>
-                    </div>
-                    <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
-                        <div class="pricing_box1_wrapper">
-                            <div class="box1_heading_wrapper">
-                                <h1 style="padding: 34px 0;">ICU at Home </h1>
-                            </div>
-                            <div class="price_box1_wrapper">
-                                <div class="price_box1">
-                                    <h1><sub>₹</sub><span>{{ $package2->amount }}</span></h1>
-                                    <p>/ per Day</p>
-                                </div>
-                            </div>
-                            <div class="pricing_cont_wrapper" style="margin-bottom: 59px;">
-                                <h1>features</h1>
-                                <div class="pricing_cont">
-                                    <ul>
-                                        <li>Free Assessment</li>
-                                        <li>Transparent care</li>
-                                        <li>Testing</li>
-                                        <li>Setting up medical equipment</li>
-                                        <li>Stabilization of patient </li>
-                                        <li>Regular Update  </li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="pricing_btn_wrapper">
-                                <div class="pricing_btn">
-                                    <ul>
-                                        <li><a href="{{route('web.package.package_detail', ['slug'=>urlencode($package2->slug),'id'=>$package2->id])}}">View Detail</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    @endif
                 </div>
             </div>
         </div>

@@ -117,7 +117,7 @@
                     </div>
                     <div class="abt_block">
                         <div class="abt_txt">
-                            <h3>Covid-19 Care (Covid19 Home Isolation and Quarantine)</h3>
+                            <h3>{{ $package->name }} (Isolation and Quarantine)</h3>
                             <div class="price_box1">
                                 <h1><sub>₹</sub><span>{{ $package->amount }}</span><sub>  / per Day</sub></h1>
                             </div>
@@ -125,51 +125,7 @@
                         </div>
                         <div class="">
                             <div class="content">
-                                <ul>
-                                    <li><i class="fa fa-check-square-o" aria-hidden="true"></i><span>FREE ICU DOCTOR consultation – Online and WhatsApp </span></li>
-                                    <li><i class="fa fa-check-square-o" aria-hidden="true"></i><span>Complete care plan for family with trained nurse and all medical equipment. </span></li>
-                                    <li><i class="fa fa-check-square-o" aria-hidden="true"></i><span>Complete training for family for home isolation and quarantine with hand hygiene protocols. </span></li>
-                                    <li><i class="fa fa-check-square-o" aria-hidden="true"></i><span>Daily review and consultation by doctor for vital monitoring.</span></li>
-
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="abt_txt">
-                            <p class="sub_header med_toppadder20">Package for Post COVID- 19 Patients</p>
-                        </div>
-                        <div class="">
-                            <div class="content">
-                                <ul>
-                                    <li><i class="fa fa-check-square-o" aria-hidden="true"></i><span>Oxygen Concentrator/ cylinder - 5 LIT. </span></li>
-                                    <li><i class="fa fa-check-square-o" aria-hidden="true"></i><span>Cardiac Monitor. </span></li>
-                                    <li><i class="fa fa-check-square-o" aria-hidden="true"></i><span>PPE KIT. </span></li>
-                                    <li><i class="fa fa-check-square-o" aria-hidden="true"></i><span>Medical Consumable – N95 Mask, Sanitizer, Gloves etc. </span></li>
-                                    <li><i class="fa fa-check-square-o" aria-hidden="true"></i><span>Nurse 24 Hours Stay. </span></li>
-                                    <li><i class="fa fa-check-square-o" aria-hidden="true"></i><span>Dr. Consultation – Online/ WhatsApp. </span></li>
-                                    <li><i class="fa fa-check-square-o" aria-hidden="true"></i><span>Essential Medical kit -Infrared Thermometer, Pulse Oximeter, Stethoscope, BP Machine, Steamer.</span></li>
-
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="abt_txt">
-                            <p class="sub_header med_toppadder20">Terms and conditions </p>
-                        </div>
-                        <div class="">
-                            <div class="content">
-                                <ul>
-                                    <li><i class="fa fa-check-square-o" aria-hidden="true"></i><span>Minimum service period - 07 days (No refund) and onwards pro data basis. </span></li>
-                                    <li><i class="fa fa-check-square-o" aria-hidden="true"></i><span>All the payment will be only online or cheque, no cash payment. </span></li>
-                                    <li><i class="fa fa-check-square-o" aria-hidden="true"></i><span>Medical consumable like gloves, mask, and sanitizer is included in package. </span></li>
-                                    <li><i class="fa fa-check-square-o" aria-hidden="true"></i><span>All medical equipment is also included in package </span></li>
-                                    <li><i class="fa fa-check-square-o" aria-hidden="true"></i><span>Payment advance- Rs.70000 </span></li>
-                                    <li><i class="fa fa-check-square-o" aria-hidden="true"></i><span>COVID 19 lab test cost for staff will be wear by patient party. </span></li>
-                                    <li><i class="fa fa-check-square-o" aria-hidden="true"></i><span>Family have to follow all govt guidelines issued for Covid19 home isolation and quarantine </span></li>
-                                    <li><i class="fa fa-check-square-o" aria-hidden="true"></i><span>We have clarified all medical and critical illness of the patient before our Home care services and saturation going below 88 should be managed in hospital only. </span></li>
-                                    <li><i class="fa fa-check-square-o" aria-hidden="true"></i><span>All kind Medicines/ lab will be your responsibility. </span></li>
-                                    <li><i class="fa fa-check-square-o" aria-hidden="true"></i><span>Any refund will be only online in three working days after closure of services. </span></li>
-                                    <li><i class="fa fa-check-square-o" aria-hidden="true"></i><span>If in any case staff have any medical issues it will managed by office and medical COVID insurance will be given to staff</span></li>
-
-                                </ul>
+                                {!! $package->desc !!}
                             </div>
                         </div>
                     </div>

@@ -36,9 +36,14 @@
                     <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12 mx-auto">
                         <div class="login_tab_top_wrap float_left">
                             <div class="btn_log">
-                                <a href="{{ route('web.password.forgot-pasword') }}">FORGOT PASSWORD </a>
+                                <a href="#">FORGOT PASSWORD </a>
                             </div>
-
+                            @if (Session::has('message'))
+                                <div class="alert alert-success" >{{ Session::get('message') }}</div>
+                            @endif
+                            @if (Session::has('error'))
+                                <div class="alert alert-danger">{{ Session::get('error') }}</div>
+                            @endif
                             <div class="login_wrapper  float_left">
                                 {{ Form::open(['method' => 'post','route'=>'web.user.forgot_password']) }}
                                     <div class="formsix-pos">

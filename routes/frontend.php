@@ -1,8 +1,7 @@
 <?php
 
 use Illuminate\Http\Request;
-
-
+Route::post('/reset-password', 'ForgetPasswordController@updatePassword')->middleware(['guest'])->name('password.update');
 // ========== Home =========
 Route::group(['namespace' => 'Frontend'], function () {
     Route::get('/', 'FrontendController@index')->name('web.index');
@@ -52,6 +51,8 @@ Route::group(['namespace' => 'Frontend'], function () {
     Route::group(['namespace' => 'ForgetPassword'], function () {
         Route::get('/Forgot-password', 'ForgetPasswordController@index')->name('web.password.forgot-pasword');
         Route::post('send/forgot-password', 'ForgetPasswordController@send')->name('web.user.forgot_password');
+        Route::get('password/reset/{token}', 'ForgetPasswordController@showResetForm')->name('password.reset');
+        Route::post('password/reset', 'ForgetPasswordController@postReset')->name('password.do.reset');
     });
 });
 
@@ -59,9 +60,6 @@ Route::group(['namespace' => 'Frontend'], function () {
 Route::get('/Confirm-password', function () {
     return view('web.password.confirm-pasword');
 })->name('web.password.confirm-pasword');
-
-
-
 
 
 // ========== Contact =========
@@ -73,12 +71,6 @@ Route::get('/Contact', function () {
 Route::get('/Doctor_on_wall', function () {
     return view('web.doctor_on_call.doctor_on_call');
 })->name('web.doctor_on_call.doctor_on_call');
-
-
-
-
-
-
 
 // ========== Team =========
 Route::get('/Team', function () {

@@ -38,22 +38,40 @@
                             <div class="btn_log">
                                 <a href="#">CONFIRM PASSWORD </a>
                             </div>
-
+                            @if (Session::has('message'))
+                                <div class="alert alert-success" >{{ Session::get('message') }}</div>
+                            @endif
+                            @if (Session::has('error'))
+                                <div class="alert alert-danger">{{ Session::get('error') }}</div>
+                            @endif
+                        {{ Form::open(['method' => 'post','route'=>'password.update'])}}   
+                            <input type="hidden" name="token" value="{{ $token }}">               
                             <div class="login_wrapper  float_left">
                                 <div class="formsix-e">
                                     <div class="form-group i-password">
-                                        <input type="password" class="form-control" required="" id="password1" placeholder="Password *">
+                                        <input type="password" class="form-control" name="password" required="" id="password1" placeholder="Password *">
+                                        @if($errors->has('password'))
+                                            <span class="help-block">
+                                                <strong>{{ $errors->first('password') }}</strong>
+                                            </span>
+                                        @endif
                                     </div>
                                 </div>
                                 <div class="formsix-e">
                                     <div class="form-group i-password">
-                                        <input type="password" class="form-control" required="" id="password2" placeholder="Password *">
+                                        <input type="password" class="form-control" name="confirm_password" required="" id="password2" placeholder="Password *">
+                                        @if($errors->has('confirm_password'))
+                                            <span class="help-block">
+                                                <strong>{{ $errors->first('confirm_password') }}</strong>
+                                            </span>
+                                        @endif
                                     </div>
                                 </div>
                                 <div class="header_btn inner_btn login_btn log float_left">
-                                    <a href="#">Submit</a>
+                                    <button type="submit">Submit</button>
                                 </div>
                             </div>
+                        </form>
                         </div>
                     </div>
                 </div>
