@@ -38,22 +38,23 @@
                             <div class="btn_log">
                                 <a href="#">CONFIRM PASSWORD </a>
                             </div>
-
+                        {{ Form::open(['method' => 'post','route'=>'password.reset'])}}                  
                             <div class="login_wrapper  float_left">
                                 <div class="formsix-e">
                                     <div class="form-group i-password">
-                                        <input type="password" class="form-control" required="" id="password1" placeholder="Password *">
+                                        <input type="password" class="form-control" name="password" required="" id="password1" placeholder="Password *">
                                     </div>
                                 </div>
                                 <div class="formsix-e">
                                     <div class="form-group i-password">
-                                        <input type="password" class="form-control" required="" id="password2" placeholder="Password *">
+                                        <input type="password" class="form-control" name="confirm_password" required="" id="password2" placeholder="Password *">
                                     </div>
                                 </div>
                                 <div class="header_btn inner_btn login_btn log float_left">
-                                    <a href="#">Submit</a>
+                                    <button type="submit">Submit</button>
                                 </div>
                             </div>
+                        </form>
                         </div>
                     </div>
                 </div>

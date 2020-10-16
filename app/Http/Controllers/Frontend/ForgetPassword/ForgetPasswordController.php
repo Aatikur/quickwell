@@ -27,9 +27,34 @@ class ForgetPasswordController extends Controller
 
         switch ($response) {
             case Password::RESET_LINK_SENT:
-                return redirect()->back()->with('status', trans($response));
+                return redirect()->back()->with('message', trans($response));
             case Password::INVALID_USER:
                 return redirect()->back()->withErrors(['email' => trans($response)]);
         }
+    }
+
+    public function postReset(Request $request){
+        $this->validate($request, [
+            'token' => 'required',
+            'email' => 'required',
+            'password' => 'required|string|min:6|same:confirm_password'
+        ]);
+
+        $status = Password::reset(
+            $request->only('email','password', 'confirm_password', 'token'),
+            function ($user, $password) use ($request) {
+                $user->forceFill([
+                    'password' => Hash::make($password)
+                ])->save();
+    
+                $user->setRememberToken(Str::random(60));
+    
+                event(new PasswordReset($user));
+            }
+        );
+
+        return $status == Password::PASSWORD_RESET
+                ? redirect()->route('login')->with('status', __($status))
+                : back()->withErrors(['email' => __($status)]);
     }
 }

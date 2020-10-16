@@ -98,13 +98,7 @@
                   <li>
                       <a href="{{ route('admin.getintouch') }}"><i class="fa fa-phone" aria-hidden="true"></i> Get In Touch </a>
                   </li>
-                  {{-- <li>
-                      <a><i class="fa fa-gift" aria-hidden="true"></i> Package <span class="fa fa-chevron-down"></span></a>
-                      <ul class="nav child_menu">
-                        <li><a href="{{ route('admin.package')}}">Add Package</a></li>
-                        <li><a href="{{ route('admin.package_list')}}">Package List</a></li>
-                      </ul>
-                  </li> --}}
+                 
                   <li>
                       <a><i class="fa fa-certificate" aria-hidden="true"></i> Testimonial <span class="fa fa-chevron-down"></span></a>
                       <ul class="nav child_menu">
@@ -127,6 +121,15 @@
                         <li><a href="{{ route('admin.blog_list') }}">Blog List</a></li>
                       </ul>
                   </li>
+                  <li>
+                    <a><i class="fa fa-gift" aria-hidden="true"></i> Package <span class="fa fa-chevron-down"></span></a>
+                    <ul class="nav child_menu">
+                      <li><a href="{{ route('admin.package')}}">Add Package</a></li>
+                      <li><a href="{{ route('admin.package_list')}}">Package List</a></li>
+                    </ul>
+                </li>
+                  <li><a href="{{route('admin.change_password_form')}}"><i class="fa fa-key" aria-hidden="true"></i>Change Password</a></li>
+
                 </ul>
               </div>
 

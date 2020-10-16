@@ -10,9 +10,7 @@ class FrontendController extends Controller
 {
     public function index(){
         $blogs = Blog::where('status', 1)->latest()->limit(3)->get();
-        $package1 = Package::where('status', 1)->where('id', 1)->first();
-        $package2 = Package::where('status', 1)->where('id', 2)->first();
-
-        return view('web.index', compact('blogs', 'package1', 'package2'));
+        $packages = Package::where('status', 1)->latest()->limit(2)->get();
+        return view('web.index', compact('blogs', 'packages'));
     }
 }
