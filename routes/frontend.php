@@ -1,46 +1,7 @@
 <?php
 
 use Illuminate\Http\Request;
-
-// Password reset link request routes...
-// Route::get('password/email', 'Auth\ForgotPasswordController@showLinkRequestForm')->name('password.email');
-// Route::post('password/email', 'Auth\ForgotPasswordController@sendResetLinkEmail');
-
-// // Password reset routes...
-// Route::get('password/reset/link/{token}', 'Auth\ResetPasswordController@showResetForm')->name('password.request');
-// Route::post('password/reset', 'Auth\ResetPasswordController@postReset')->name('password.reset');
-use Illuminate\Auth\Events\PasswordReset;
-use Illuminate\Support\Facades\Hash;
-use Illuminate\Support\Facades\Password;
-use Illuminate\Support\Str;
-Route::get('/reset-password/{token}', function ($token) {
-    return view('web.password.confirm-password', ['token' => $token]);
-})->middleware(['guest'])->name('password.reset');
-
-Route::post('/reset-password', function (Request $request) {
-    $request->validate([
-        'token' => 'required',
-        'email' => 'required|email',
-        'password' => 'required|min:8|same:confirm_password',
-    ]);
-
-    $status = Password::reset(
-        $request->only('email', 'password', 'confirm_password', 'token'),
-        function ($user, $password) use ($request) {
-            $user->forceFill([
-                'password' => Hash::make($password)
-            ])->save();
-
-            $user->setRememberToken(Str::random(60));
-
-            event(new PasswordReset($user));
-        }
-    );
-
-    return $status == Password::PASSWORD_RESET
-                ? redirect()->route('login')->with('status', __($status))
-                : back()->withErrors(['email' => __($status)]);
-})->middleware(['guest'])->name('password.update');
+Route::post('/reset-password', 'ForgetPasswordController@updatePassword')->middleware(['guest'])->name('password.update');
 // ========== Home =========
 Route::group(['namespace' => 'Frontend'], function () {
     Route::get('/', 'FrontendController@index')->name('web.index');
@@ -90,7 +51,8 @@ Route::group(['namespace' => 'Frontend'], function () {
     Route::group(['namespace' => 'ForgetPassword'], function () {
         Route::get('/Forgot-password', 'ForgetPasswordController@index')->name('web.password.forgot-pasword');
         Route::post('send/forgot-password', 'ForgetPasswordController@send')->name('web.user.forgot_password');
-        // Route::post('password/reset', 'ForgetPasswordController@postReset')->name('password.reset');
+        Route::get('password/reset/{token}', 'ForgetPasswordController@showResetForm')->name('password.reset');
+        Route::post('password/reset', 'ForgetPasswordController@postReset')->name('password.do.reset');
     });
 });
 
