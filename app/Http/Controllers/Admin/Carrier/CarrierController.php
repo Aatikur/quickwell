@@ -81,19 +81,15 @@ class CarrierController extends Controller
 
     public function update(Request $request){
         $this->validate($request, [
-            'designation' => 'required',
-            'educational_qualification' => 'required',
-            'work_experience'   => 'required',
+            'designation'  => 'required',
             'role'   => 'required'
         ]);
-        
+
         $id = $request->input('id');
         $carrier = Carrier::find($id);
         $carrier->designation = $request->input('designation');
-        $carrier->educational_qualification = $request->input('educational_qualification');
-        $carrier->work_experience = $request->input('work_experience');
         $carrier->role = $request->input('role');
-
+        
         if($carrier->save()){
             return redirect()->back()->with('message', 'Job Openings Updated Successfully!');
         }else {
