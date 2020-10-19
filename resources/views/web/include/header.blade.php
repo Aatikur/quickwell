@@ -20,7 +20,15 @@
     @yield('css')
     <!-- favicon link-->
     <link rel="shortcut icon" type="image/icon" href="{{asset('web/images/fav.png')}}" />
-<script src='../../../google_analytics_auto.js'></script></head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-180797595-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());   
+        gtag('config', 'UA-180797595-1');
+    </script>
+</head>
 
 <body>
     <!-- preloader Start -->
@@ -72,7 +80,7 @@
                         <div class="mainmenu  d-xl-block d-lg-block d-md-block d-sm-none d-none">
                             <ul class="main_nav_ul">
                                 <li class="gc_main_navigation"><a href="{{route('web.index')}}" class="gc_main_navigation hover_color"> Home </a></li>
-                                <li class="gc_main_navigation"><a href="{{route('web.doctor_on_call.doctor_on_call')}}" class="gc_main_navigation hover_color"> DOCTOR ON WALL </a></li>
+                                <li class="gc_main_navigation"><a href="{{route('web.doctor_on_call.doctor_on_call')}}" class="gc_main_navigation hover_color"> DOCTOR ON CALL </a></li>
                                 <li class="gc_main_navigation"><a href="{{route('web.team.team')}}" class="gc_main_navigation hover_color"> OUR TEAM </a></li>
                                 <li class="gc_main_navigation"><a href="{{route('web.career.career')}}" class="gc_main_navigation hover_color"> CAREER </a></li>
                                 <li class="gc_main_navigation"><a href="{{route('web.testimonial.testimonial')}}" class="gc_main_navigation hover_color"> TESTIMONIALS </a></li>
@@ -126,7 +134,7 @@
                     <div id='cssmenu' class="wd_single_index_menu">
                         <ul>
                             <li><a href="{{route('web.index')}}"> INDEX </a></li>
-                            <li><a href="{{route('web.doctor_on_call.doctor_on_call')}}"> DOCTOR ON WALL </a></li>
+                            <li><a href="{{route('web.doctor_on_call.doctor_on_call')}}"> DOCTOR ON CALL </a></li>
                             <li><a href="{{route('web.team.team')}}"> OUR TEAM </a></li>
                             <li><a href="{{route('web.career.career')}}"> CAREER </a></li>
                             <li><a href="{{route('web.testimonial.testimonial')}}"> TESTIMONIALS </a></li>

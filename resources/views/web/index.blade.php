@@ -199,12 +199,12 @@
         <!-- counter wrapper end-->
 
         <!--testimonial wrapper start-->
-        <div class="testimonial_wrapper med_toppadder100">
+        <div class="testimonial_wrapper med_toppadder30">
             <div class="test_overlay"></div>
             <div class="container">
                 <div class="row">
                     <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 col-lg-offset-2">
-                        <div class="team_heading_wrapper med_bottompadder50 wow fadeInDown" data-wow-delay="0.5s">
+                        <div class="team_heading_wrapper wow fadeInDown" data-wow-delay="0.5s">
                             <h1 class="med_bottompadder20 text-white">our News & blog</h1>
                             <img src="{{asset('web/images/Icon_team.png')}}" alt="line" class="med_bottompadder20">
                         </div>
@@ -219,13 +219,7 @@
                                     </figure>
                                 </div>
                                 <div class="blog_txt">
-                                    <h1><a href="{{route('web.single_post',['slug'=>urlencode($blog->slug),'id'=>$blog->id])}}">{{ $blog->titile }}</a></h1>
-                                    <div class="blog_txt_info">
-                                        <ul>
-                                            <li>WRITTEN ON: {{ date_format($blog->created_at, 'M m, Y') }}</li>
-                                        </ul>
-                                    </div>
-                                    <p>{!! Str::words($blog->body, 25, '...') !!}</p>
+                                    <h1><a href="{{route('web.single_post',['slug'=>urlencode($blog->slug),'id'=>$blog->id])}}">{{ $blog->title }}</a></h1>
                                     <a href="{{route('web.single_post',['slug'=>urlencode($blog->slug),'id'=>$blog->id])}}">Read More <i class="fa fa-long-arrow-right"></i></a>
                                 </div>
                             </div>

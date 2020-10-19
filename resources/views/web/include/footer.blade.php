@@ -91,11 +91,14 @@
                                 <div class="bottom_footer_copy_wrapper">
                                     <span>Copyright © 2020- <a href="#">Quickwell Remedy</a>| Design by <a href="#">Webinfotech.</a></span>
                                 </div>
-                                <div class="footer_btm_icon">
+                                <div class="footer_btm_icon" style="margin-right: 0">
                                     <ul>
-                                        <li><a href="#"><i class="fa fa-youtube-play" aria-hidden="true"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                                        <li><a href="https://www.facebook.com/quickwellremedyOfficial" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                                        <li><a href="https://twitter.com/QuickwellRemedy" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                                        <li><a href="https://www.instagram.com/quickwellremedyofficial/" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                                        <li><a href="https://www.linkedin.com/company/68586023" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+                                        <li><a href="https://in.pinterest.com/pin/707768897683313416/" target="_blank"><i class="fa fa-pinterest-p" aria-hidden="true"></i></a></li>
+                                        <li><a href="https://www.youtube.com/channel/UCNatSFU9lRLSGMKsYUk9zPQ/featured?view_as=subscriber" target="_blank"><i class="fa fa-youtube-play" aria-hidden="true"></i></a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -109,6 +112,10 @@
             <div class="up_wrapper">
                 <a href="javascript:" id="return-to-top"><i class="fa fa-arrow-circle-o-up" aria-hidden="true"></i></a>
             </div>
+        </div>
+        {{-- Whatsapp --}}
+        <div id='whats-chat'>            
+            <a href="https://api.whatsapp.com/send?phone=8797071502&text"><svg xmlns="http://www.w3.org/2000/svg" version="1" width="35" height="35" viewBox="0 0 90 90"><path d="M90 44a44 44 0 0 1-66 38L0 90l8-24A44 44 0 0 1 46 0c24 0 44 20 44 44zM46 7C25 7 9 24 9 44c0 8 2 15 7 21l-5 14 14-4a37 37 0 0 0 58-31C83 24 66 7 46 7zm22 47l-2-1-7-4-3 1-3 4h-3c-1 0-4-1-8-5-3-3-6-6-6-8v-2l2-2 1-1v-2l-4-8c0-2-1-2-2-2h-2l-3 1c-1 1-4 4-4 9s4 11 5 11c0 1 7 12 18 16 11 5 11 3 13 3s7-2 7-5l1-5z" fill="#FFF"/></svg></a>
         </div>
     </div>
 </div>
@@ -124,23 +131,21 @@
 <script src="{{asset('web/js/jquery.magnific-popup.js')}}"></script>
 <script src="{{asset('web/js/custom.js')}}"></script>
 <!--js code-->
-<script>
-    function initMap() {
-        var uluru = {
-            lat: -36.742775,
-            lng: 174.731559
-        };
-        var map = new google.maps.Map(document.getElementById('map'), {
-            zoom: 15,
-            scrollwheel: false,
-            center: uluru
-        });
-        var marker = new google.maps.Marker({
-            position: uluru,
-            map: map
-        });
-    }
-</script>
+
+<!--Start of Tawk.to Script-->
+<script type="text/javascript">
+    var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+    (function(){
+    var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+    s1.async=true;
+    s1.src='https://embed.tawk.to/5f8d6debf91e4b431ec5a381/1el07p1ue';
+    s1.charset='UTF-8';
+    s1.setAttribute('crossorigin','*');
+    s0.parentNode.insertBefore(s1,s0);
+    })();
+    </script>
+    <!--End of Tawk.to Script-->
+
 <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBctr8WYTfFDi_oGbPEolSDzn4VZaAKVK0&amp;callback=initMap">
 </script>
 <!-- map Script-->

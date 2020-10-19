@@ -14,11 +14,11 @@
                     <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
                         <div class="med_tittle_cont_wrapper">
                             <div class="med_tittle_cont">
-                                <h1> DOCTOR ON WALL</h1>
+                                <h1> DOCTOR ON CALL</h1>
                                 <ol class="breadcrumb">
                                     <li><a href="{{route('web.index')}}">Home</a>
                                     </li>
-                                    <li> Doctor On WALL</li>
+                                    <li> Doctor On CALL</li>
                                 </ol>
                             </div>
                         </div>
