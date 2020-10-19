@@ -31,30 +31,6 @@
                 </div>
             </div>
 
-            <div class="form-group{{ $errors->has('educational_qualification') ? ' has-error' : '' }}">
-                <label for="educational_qualification" class="col-md-2 control-label">Educational Qualification</label>
-                <div class="col-md-10">
-                    <input type="text" class="form-control" name="educational_qualification" value="{{ $carrier->educational_qualification }}" required>
-                    @if ($errors->has('educational_qualification'))
-                        <span class="help-block">
-                            <strong>{{ $errors->first('educational_qualification') }}</strong>
-                        </span>
-                    @endif
-                </div>
-            </div>
-
-            <div class="form-group{{ $errors->has('work_experience') ? ' has-error' : '' }}">
-                <label for="work_experience" class="col-md-2 control-label">Work Experience</label>
-                <div class="col-md-10">
-                    <input type="text" class="form-control" name="work_experience" value="{{ $carrier->work_experience }}" required>
-                    @if ($errors->has('work_experience'))
-                        <span class="help-block">
-                            <strong>{{ $errors->first('work_experience') }}</strong>
-                        </span>
-                    @endif
-                </div>
-            </div>
-            
             <div class="form-group{{ $errors->has('role') ? ' has-error' : '' }}">
                 <label for="role" class="col-md-2 control-label">Roles and Responsibilty</label>
                 <div class="col-md-10">
