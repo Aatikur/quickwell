@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta http-equiv="content-type" content="text/html;charset=utf-8" />
     <title>Quickwell Remedy || Taking Care From Home</title>
-    <meta content="width=device-width, initial-scale=2.0" name="viewport" />
+    <meta content="width=device-width, initial-scale=1.0,maximum-scale=1.0" name="viewport" />
     <meta name="description" content="Qickwell" />
     <!-- style -->
     <link rel="stylesheet" type="text/css" href="{{asset('web/css/animate.css')}}">
