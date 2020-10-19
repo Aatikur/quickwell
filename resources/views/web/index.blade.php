@@ -20,8 +20,8 @@
                                                 <h1 data-animation-in="fadeInDown" data-animation-out="animate-out fadeOutDown">ICU<span>Home Care</span></h1></div>
                                             <h2 data-animation-in="fadeInDown" data-animation-out="animate-out fadeOutDown">total health Home care </h2>
                                             <ul>
-                                                <li data-animation-in="bounceInLeft" data-animation-out="animate-out bounceOutLeft"><a href="#">Contact Us</a></li>
-                                                <li data-animation-in="bounceInLeft" data-animation-out="animate-out bounceOutLeft"><a href="#">Call Us</a></li>
+                                                <li data-animation-in="bounceInLeft" data-animation-out="animate-out bounceOutLeft"><a href="{{route('web.contact.contact')}}">Contact Us</a></li>
+                                                <li data-animation-in="bounceInLeft" data-animation-out="animate-out bounceOutLeft"><a href="tel:1800-419-4948">Call Us</a></li>
                                             </ul>
                                         </div>
                                     </div>
@@ -39,8 +39,8 @@
                                                 <h1 data-animation-in="fadeInDown" data-animation-out="animate-out fadeOutDown">ICU<span>Home Care</span></h1></div>
                                             <h2 data-animation-in="fadeInDown" data-animation-out="animate-out fadeOutDown">Home Care Solution</h2>
                                             <ul>
-                                                <li data-animation-in="bounceInLeft" data-animation-out="animate-out bounceOutLeft"><a href="#">Contact Us</a></li>
-                                                <li data-animation-in="bounceInLeft" data-animation-out="animate-out bounceOutLeft"><a href="#">Call Us</a></li>
+                                                <li data-animation-in="bounceInLeft" data-animation-out="animate-out bounceOutLeft"><a href="{{route('web.contact.contact')}}">Contact Us</a></li>
+                                                <li data-animation-in="bounceInLeft" data-animation-out="animate-out bounceOutLeft"><a href="tel:1800-419-4948">Call Us</a></li>
                                             </ul>
                                         </div>
                                     </div>
@@ -58,8 +58,8 @@
                                                 <h1 data-animation-in="fadeInDown" data-animation-out="animate-out fadeOutDown">ICU<span>Home Care</span></h1></div>
                                             <h2 data-animation-in="fadeInDown" data-animation-out="animate-out fadeOutDown">Intensive Home Care</h2>
                                             <ul>
-                                                <li data-animation-in="bounceInLeft" data-animation-out="animate-out bounceOutLeft"><a href="#">Contact Us</a></li>
-                                                <li data-animation-in="bounceInLeft" data-animation-out="animate-out bounceOutLeft"><a href="#">Call Us</a></li>
+                                                <li data-animation-in="bounceInLeft" data-animation-out="animate-out bounceOutLeft"><a href="{{route('web.contact.contact')}}">Contact Us</a></li>
+                                                <li data-animation-in="bounceInLeft" data-animation-out="animate-out bounceOutLeft"><a href="tel:1800-419-4948">Call Us</a></li>
                                             </ul>
                                         </div>
                                     </div>

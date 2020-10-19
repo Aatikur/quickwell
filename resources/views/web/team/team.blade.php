@@ -120,7 +120,7 @@
                                             </div>
                                             <div class="event_icon1">
                                                 <h2><a href="#">Mrs. Priyanka Singh</a></h2>
-                                                <p>Mrs Priyanka Singh has completed her Bachelors of Arts from the Bijapur University, Ara. She is one of the directors of Quickwell Remedy Healthcare and also holds the positions as   director of the 2 other companies Kashivishwanath Pipes Private Limited and Dolphin Water Solutions Limited.</p>
+                                                <p>Mrs Priyanka Singh has completed her Masters of Arts from the Bijapur University, Ara. She is one of the directors of Quickwell Remedy Healthcare and also holds the positions as   director of the 2 other companies Kashivishwanath Pipes Private Limited and Dolphin Water Solutions Limited.</p>
                                             </div>
                                         </div>
                                     </div>
@@ -134,7 +134,7 @@
                                             </div>
                                             <div class="event_icon1">
                                                 <h2><a href="#">Mr. Saket Kumar</a></h2>
-                                                <p>Mr. Saket kumar has competed his Bachelors of engineering from Dayananda Sagar College of engineering, Bangalore. He holds the key position at Quickwell Remedy Healthcare. He has worked with 2 prominent Companies like Indiamart and Omics International and has a good experience in the field of Marketing and Sales.</p>
+                                                <p>Mr. Saket kumar has completed his Bachelors of engineering from Dayananda Sagar College of engineering, Bangalore. He holds the key position at Quickwell Remedy Healthcare. He has worked with 2 prominent Companies like Indiamart and Omics International and has a good experience in the field of Marketing and Sales.</p>
                                             </div>
                                         </div>
                                     </div>

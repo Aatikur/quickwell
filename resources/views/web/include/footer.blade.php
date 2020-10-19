@@ -11,8 +11,8 @@
                         <div class="footer_box_add">
                             <ul>
                                 <li><i class="fa fa-map-marker" aria-hidden="true"></i>103, Janak Palace, Manglam Enclave, RPS more Bailey Road, Patna- 801503 <br> H.Off: F NO 301, Block C, Rajendra Park, Sector 105, Gurugram, Haryana 122001</li>
-                                <li><i class="fa fa-phone" aria-hidden="true"></i> 1800-419-4948 | +91-8797071501</li>
-                                <li><i class="fa fa-envelope" aria-hidden="true"></i><a href="#"> info@quickwellhealthcare.com</a></li>
+                                <li><i class="fa fa-phone" aria-hidden="true"></i> <a href="tel:1800-419-4948">1800-419-4948</a> | <a href="tel:+918797071501">+91-8797071501</a></li>
+                                <li><i class="fa fa-envelope" aria-hidden="true"></i><a href="mailto:info@quickwellhealthcare.com"> info@quickwellhealthcare.com</a></li>
                             </ul>
                         </div>
                     </div>

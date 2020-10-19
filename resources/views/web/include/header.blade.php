@@ -36,7 +36,7 @@
                     <div class="top_header_add">
                         <ul>
                             <li><i class="fa fa-map-marker" aria-hidden="true"></i><span>Address :</span> 103, Janak Palace, Manglam Enclave, RPS more Bailey Road, Patna- 801503</li>
-                            <li><i class="fa fa-phone" aria-hidden="true"></i><span>Call us :</span> 1800-419-4948</li>
+                            <li><i class="fa fa-phone" aria-hidden="true"></i><span>Call us :</span> <a href="tel:1800-419-4948">1800-419-4948</a></li>
                         </ul>
                     </div>
                     <div class="top_login">
@@ -72,7 +72,7 @@
                         <div class="mainmenu  d-xl-block d-lg-block d-md-block d-sm-none d-none">
                             <ul class="main_nav_ul">
                                 <li class="gc_main_navigation"><a href="{{route('web.index')}}" class="gc_main_navigation hover_color"> Home </a></li>
-                                <li class="gc_main_navigation"><a href="{{route('web.doctor_on_call.doctor_on_call')}}" class="gc_main_navigation hover_color"> DOCTOR ON CALL </a></li>
+                                <li class="gc_main_navigation"><a href="{{route('web.doctor_on_call.doctor_on_call')}}" class="gc_main_navigation hover_color"> DOCTOR ON WALL </a></li>
                                 <li class="gc_main_navigation"><a href="{{route('web.team.team')}}" class="gc_main_navigation hover_color"> OUR TEAM </a></li>
                                 <li class="gc_main_navigation"><a href="{{route('web.career.career')}}" class="gc_main_navigation hover_color"> CAREER </a></li>
                                 <li class="gc_main_navigation"><a href="{{route('web.testimonial.testimonial')}}" class="gc_main_navigation hover_color"> TESTIMONIALS </a></li>
@@ -126,7 +126,7 @@
                     <div id='cssmenu' class="wd_single_index_menu">
                         <ul>
                             <li><a href="{{route('web.index')}}"> INDEX </a></li>
-                            <li><a href="{{route('web.doctor_on_call.doctor_on_call')}}"> DOCTOR ON CALL </a></li>
+                            <li><a href="{{route('web.doctor_on_call.doctor_on_call')}}"> DOCTOR ON WALL </a></li>
                             <li><a href="{{route('web.team.team')}}"> OUR TEAM </a></li>
                             <li><a href="{{route('web.career.career')}}"> CAREER </a></li>
                             <li><a href="{{route('web.testimonial.testimonial')}}"> TESTIMONIALS </a></li>
