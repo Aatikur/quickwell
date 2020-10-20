@@ -144,6 +144,7 @@
                             <h2>There's No Job Openings Right Now.</h2>
                         </div>
                     @endif
+                    <style>.abt_block span {font-family: 'Open Sans', sans-serif!important;}</style>
                 </div>
             </div>
         </div>

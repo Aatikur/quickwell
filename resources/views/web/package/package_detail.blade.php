@@ -121,7 +121,6 @@
                             <div class="price_box1">
                                 <h1><sub>₹</sub><span>{{ $package->amount }}</span><sub>  / per Day</sub></h1>
                             </div>
-                            <p class="sub_header med_toppadder20"> Home isolation and quarantine package </p>
                         </div>
                         <div class="">
                             <div class="content">

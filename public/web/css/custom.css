@@ -42,3 +42,7 @@
 .profile h3 {
     color: #777;
 }
+.certificate .certificate_img img {
+    max-width: 100%;
+    border: 5px solid #2ec8a6;
+}

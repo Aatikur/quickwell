@@ -238,6 +238,37 @@
         <!-- testimonial wrapper end-->
 
         <!-- booking wrapper start -->
+        <div class="booking_wrapper med_toppadder50">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 col-lg-offset-2">
+                        <div class="team_heading_wrapper med_bottompadder50 wow fadeInDown" data-wow-delay="0.5s">
+                            <h1 class="med_bottompadder20">Certification</h1>
+                            <img src="{{asset('web/images/Icon_team.png')}}" alt="line" class="med_bottompadder20">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="certificate">
+                    <div class="row">
+                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6">
+                            <div class="certificate_img">
+                                <img src="{{asset('web/images/certificate/1.jpg')}}" alt="">
+                            </div>
+                        </div>
+                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6">
+                            <div class="certificate_img">
+                                <img src="{{asset('web/images/certificate/2.jpg')}}" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- testimonial wrapper end-->
+
+        <!-- booking wrapper start -->
         <div class="booking_wrapper med_toppadder100">
             <div class="container">
                 <div class="row">

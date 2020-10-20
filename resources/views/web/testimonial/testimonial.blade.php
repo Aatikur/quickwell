@@ -62,6 +62,7 @@
                                         <h3>There's no testimonial.</h3>
                                     </div>
                                 @endif
+                                <style>.t_client_cont_wrapper2 p span {font-family: 'Droid Serif', sans-serif;}</style>
                             </div>
                         </div>
                     </div>
