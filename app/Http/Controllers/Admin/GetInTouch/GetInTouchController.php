@@ -5,6 +5,8 @@ namespace App\Http\Controllers\Admin\GetInTouch;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\GetInTouch;
+use Illuminate\Contracts\Encryption\DecryptException;
+
 class GetInTouchController extends Controller
 {
     public function index(){

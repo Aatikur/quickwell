@@ -1,6 +1,6 @@
 <?php
 
-use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Route;
 
 Route::group(['namespace' => 'Admin'],function(){
     Route::get('/admin/login','LoginController@index')->name('admin.login_form');    
@@ -92,6 +92,14 @@ Route::group(['namespace' => 'Admin'],function(){
             Route::get('/get/in/touch', 'GetInTouchController@index')->name('admin.getintouch');
             Route::get('/show/in/touch', 'GetInTouchController@show')->name('admin.ajax.show_getintouch');
             Route::get('/delete/get/in/touch/{id}', 'GetInTouchController@destroyGetInTouch')->name('admin.delete_getintouch');
+        });
+
+        // Conatct
+        Route::group(['namespace' => 'Contact'], function() {
+            Route::get('/contact', 'ContactController@index')->name('admin.contact');
+            Route::get('/show/in/touch', 'ContactController@show')->name('admin.ajax.show_contact');
+            Route::get('/delete/contact/{id}', 'ContactController@destroyContact')->name('admin.delete_contact');
+            Route::get('/subject/{id}', 'ContactController@subject')->name('admin.subject');
         });
     });   
 });

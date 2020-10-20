@@ -37,39 +37,70 @@
                             <h1 class="med_bottompadder20">Contact us</h1>
                             <img src="{{asset('web/images/line.png')}}" alt="title" class="med_bottompadder20">
                         </div>
-
-                        <form>
+                        @if (Session::has('message'))
+                            <div class="alert alert-success" >{{ Session::get('message') }}</div>
+                        @endif
+                        @if (Session::has('error'))
+                            <div class="alert alert-danger">{{ Session::get('error') }}</div>
+                        @endif
+                        <form class="form-horizontal" method="POST" action="{{ route('web.contact') }}">
+                            @csrf
                             <div class="cont_main_section">
                                 <div class="row">
                                     <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
                                         <div class="contect_form1 dc_cont_div">
-                                            <input type="text" name="full_name" placeholder="Full Name" class="require">
+                                            <input type="text" name="full_name" placeholder="Full Name" value="{{ old('full_name') }}" class="require" required>
+                                            @if($errors->has('full_name'))
+                                                <span class="invalid-feedback" role="alert" >
+                                                    <strong style="color:red">{{ $errors->first('full_name') }}</strong>
+                                                </span>
+                                            @enderror
                                         </div>
                                     </div>
                                     <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
                                         <div class="contect_form1 dc_cont_div">
-                                            <input type="text" name="email" placeholder="Email" class="require" data-valid="email" data-error="Email should be valid.">
+                                            <input type="email" name="email" placeholder="Email" class="require" value="{{ old('email') }}" required>
+                                            @if($errors->has('email'))
+                                                <span class="invalid-feedback" role="alert" >
+                                                    <strong style="color:red">{{ $errors->first('email') }}</strong>
+                                                </span>
+                                            @enderror
                                         </div>
                                     </div>
                                     <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
                                         <div class="contect_form1 dc_cont_div">
-                                            <input type="text" name="contact_no" placeholder="Phone" class="require">
+                                            <input type="number" name="contact_no" placeholder="Phone" value="{{ old('contact_no') }}" class="require" required>
+                                            @if($errors->has('contact_no'))
+                                                <span class="invalid-feedback" role="alert" >
+                                                    <strong style="color:red">{{ $errors->first('contact_no') }}</strong>
+                                                </span>
+                                            @enderror
                                         </div>
                                     </div>
                                     <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
                                         <div class="contect_form1 dc_cont_div">
-                                            <input type="text" name="subject" placeholder="Subject">
+                                            <input type="text" name="subject" value="{{ old('subject') }}" placeholder="Subject">
+                                            @if($errors->has('subject'))
+                                                <span class="invalid-feedback" role="alert" >
+                                                    <strong style="color:red">{{ $errors->first('subject') }}</strong>
+                                                </span>
+                                            @enderror
                                         </div>
                                     </div>
                                     <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
                                         <div class="contect_form4 dc_cont_div">
-                                            <textarea rows="5" name="message" placeholder="Message" class="require"></textarea>
+                                            <textarea rows="5" name="message" placeholder="Message" class="require" required>{{ old('message') }}</textarea>
                                         </div>
+                                        @if($errors->has('message'))
+                                            <span class="invalid-feedback" role="alert" >
+                                                <strong style="color:red">{{ $errors->first('message') }}</strong>
+                                            </span>
+                                        @enderror
                                     </div>
                                     <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
                                         <div class="response"></div>
                                         <div class="contact_btn_wrapper med_toppadder30">
-                                            <button type="button" class="submitForm">submit</button>
+                                            <button type="submit" class="submitForm">submit</button>
                                         </div>
                                     </div>
                                 </div>

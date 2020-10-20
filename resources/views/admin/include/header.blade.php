@@ -98,6 +98,9 @@
                   <li>
                       <a href="{{ route('admin.getintouch') }}"><i class="fa fa-phone" aria-hidden="true"></i> Get In Touch </a>
                   </li>
+                  <li>
+                      <a href="{{ route('admin.contact') }}"><i class="fa fa-envelope" aria-hidden="true"></i></i> Contact </a>
+                  </li>
                  
                   <li>
                       <a><i class="fa fa-certificate" aria-hidden="true"></i> Testimonial <span class="fa fa-chevron-down"></span></a>

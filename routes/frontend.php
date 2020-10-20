@@ -54,6 +54,13 @@ Route::group(['namespace' => 'Frontend'], function () {
         Route::get('password/reset/{token}', 'ForgetPasswordController@showResetForm')->name('password.reset');
         Route::post('password/reset', 'ForgetPasswordController@postReset')->name('password.do.reset');
     });
+
+    // ========== Contact =========
+    Route::group(['namespace' => 'Contact'], function () {
+        Route::get('/Contact', 'ContactController@index')->name('web.contact.contact');
+        Route::post('contact/us', 'ContactController@contact')->name('web.contact');
+    });
+    
 });
 
 // ========== Confirm Password =========
@@ -61,11 +68,6 @@ Route::get('/Confirm-password', function () {
     return view('web.password.confirm-pasword');
 })->name('web.password.confirm-pasword');
 
-
-// ========== Contact =========
-Route::get('/Contact', function () {
-    return view('web.contact.contact');
-})->name('web.contact.contact');
 
 // ========== Doctor On call =========
 Route::get('/Doctor_on_call', function () {
