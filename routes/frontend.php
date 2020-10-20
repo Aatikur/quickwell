@@ -67,8 +67,8 @@ Route::get('/Contact', function () {
     return view('web.contact.contact');
 })->name('web.contact.contact');
 
-// ========== Doctor On Wall =========
-Route::get('/Doctor_on_wall', function () {
+// ========== Doctor On call =========
+Route::get('/Doctor_on_call', function () {
     return view('web.doctor_on_call.doctor_on_call');
 })->name('web.doctor_on_call.doctor_on_call');
 
