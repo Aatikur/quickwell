@@ -125,6 +125,8 @@
 <script src="{{asset('web/js/owl.carousel.js')}}"></script>
 <script src="{{asset('web/js/jquery.magnific-popup.js')}}"></script>
 <script src="{{asset('web/js/custom.js')}}"></script>
+<script src="{{asset('web/js/imagesloaded.pkgd.min.js')}}"></script>
+<script src="{{asset('web/js/isotope.pkgd.min.js')}}"></script>
 <!--js code-->
 
 <!--Start of Tawk.to Script-->
