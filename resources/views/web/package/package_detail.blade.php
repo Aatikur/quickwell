@@ -111,7 +111,7 @@
 
                 </div>
                 <div class="col-xl-8 col-lg-8 col-md-12 col-sm-12 col-12 abt_section">
-                    <style>@media (max-width: 767px){.abt_section { margin-top: 20px;padding: 0 20px}.price_box1 { margin-bottom: 30px}</style>
+                    <style>@media (max-width: 767px){.abt_section { margin-top: 20px;padding: 0 10px}}.price_box1 { margin-bottom: 30px}</style>
                     <div class="abt_heading_wrapper">
                         <h1 class="med_bottompadder20">Healthcare Packages </h1>
                         <img src="{{asset('web/images/line.png')}}" alt="title" class="med_bottompadder20">
