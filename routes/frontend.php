@@ -1,7 +1,8 @@
 <?php
 
 use Illuminate\Http\Request;
-Route::post('/reset-password', 'ForgetPasswordController@updatePassword')->middleware(['guest'])->name('password.update');
+use Illuminate\Support\Facades\Route;
+
 // ========== Home =========
 Route::group(['namespace' => 'Frontend'], function () {
     Route::get('/', 'FrontendController@index')->name('web.index');
@@ -53,6 +54,7 @@ Route::group(['namespace' => 'Frontend'], function () {
         Route::post('send/forgot-password', 'ForgetPasswordController@send')->name('web.user.forgot_password');
         Route::get('password/reset/{token}', 'ForgetPasswordController@showResetForm')->name('password.reset');
         Route::post('password/reset', 'ForgetPasswordController@postReset')->name('password.do.reset');
+        Route::post('/reset-password', 'ForgetPasswordController@updatePassword')->middleware(['guest'])->name('password.update');  
     });
 
     // ========== Contact =========

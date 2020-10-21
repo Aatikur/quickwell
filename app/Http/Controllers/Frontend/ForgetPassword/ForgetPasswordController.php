@@ -9,6 +9,7 @@ use Illuminate\Support\Str;
 use Illuminate\Mail\Message;
 use Illuminate\Support\Facades\Password;
 use Illuminate\Auth\Events\PasswordReset;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
 
 class ForgetPasswordController extends Controller
