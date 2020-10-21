@@ -32,7 +32,7 @@
     <div class="about_wrapper career">
         <div class="container-fluid">
             <div class="row">
-                <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12 col-12">
+                <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12 col-12 med_bottompadder20">
                     <div class="choose_heading_wrapper med_bottompadder30">
                         <h1 class="med_bottompadder20">Upload Resume</h1>
                         <img src="{{asset('web/images/line.png')}}" alt="title" class="med_bottompadder20">
@@ -119,7 +119,7 @@
                 </div>
                 <div class="col-xl-8 col-lg-8 col-md-12 col-sm-12 col-12 abt_section">
                     <div class="abt_heading_wrapper">
-                        <h1 class="med_bottompadder20">Open Positions</h1>
+                        <h1 class="med_bottompadder20 med_bottompadder20">Open Positions</h1>
                         <p>We’re always eager to meet fresh talent, so check out our open positions</p>
                         <img src="{{asset('web/images/line.png')}}" alt="title" class="med_bottompadder20">
                     </div>
