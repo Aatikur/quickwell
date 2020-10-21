@@ -262,18 +262,15 @@
                                     <div class="portfolio_icon_wrapper_iv zoom_popup">
                                         <a class="img-link" href="{{asset('web/images/certificate/1.jpg')}}"> <i class="fa fa-search-plus"></i>
                                         </a>
-                                    </div>
-    
-                                    <div class="portfolio-content">
+                                    </div>    
+                                    <div class="portfolio-content d-none d-lg-block">
                                         <div class="portfolio-info_iv">
                                             <h3>BRIT QUALIS</h3>
-                                            <p class="d-none d-sm-block">ISO 27001:2013 <br><strong>Quickwell Remedy Healthcare Pvt. Ltd.</strong></p>
+                                            <p class="d-none d-sm-block"><strong style="color: #2ec8a6;font-size: 13px;">Quickwell Remedy Healthcare Pvt. Ltd.</strong> <br>ISO 27001:2013</p>
                                         </div>
-                                        <!-- portfolio-info -->
-    
+                                        <!-- portfolio-info -->    
                                     </div>
-                                    <!-- portfolio-content -->
-    
+                                    <!-- portfolio-content -->    
                                 </div>
                                 <!-- /.portfolio-thumb -->
                             </div>
@@ -288,10 +285,10 @@
                                         </a>
                                     </div>
     
-                                    <div class="portfolio-content">
+                                    <div class="portfolio-content d-none d-lg-block">
                                         <div class="portfolio-info_iv">
                                             <h3>BRIT QUALIS</h3>
-                                            <p class="d-none d-sm-block">ISO 27001:2013 <br><strong>Quickwell Remedy Healthcare Pvt. Ltd.</strong></p>
+                                            <p class="d-none d-sm-block"> <strong style="color: #2ec8a6;font-size: 13px;">Quickwell Remedy Healthcare Pvt. Ltd.</strong><br>ISO 27001:2013</p>
                                         </div>
                                         <!-- portfolio-info -->
     

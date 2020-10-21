@@ -1,7 +1,7 @@
 /********--------responsive css of main index-----**********/
 /********-------- index-1 start ----**********/
 
-@media (max-width: 1500px){
+	@media (max-width: 1500px){
 	.what_can_Wrapper_4 div#comparison {
 		width: 100%;
 		height: 32vw;
@@ -22,6 +22,11 @@
 		margin-bottom:30px;
 	}
 	
+	}
+	@media(min-width:991px){
+		.portfolio-area .portfolio-thumb {
+			height: 230px;
+		}
 	}
 	@media (min-width: 992px) and (max-width: 1199px){
 	.address_main:after{
