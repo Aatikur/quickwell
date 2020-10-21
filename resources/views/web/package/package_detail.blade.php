@@ -119,7 +119,7 @@
                         <div class="abt_txt">
                             <h3>{{ $package->name }} (Isolation and Quarantine)</h3>
                             <div class="price_box1">
-                                <h1><sub>₹</sub><span>{{ $package->amount }}</span><sub>  / per Day</sub></h1>
+                                <h1><sub>₹</sub><span>{{ $package->amount }}</span><sub>  / Day</sub></h1>
                             </div>
                         </div>
                         <div class="">

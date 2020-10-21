@@ -28,7 +28,7 @@
         </div>
         <!-- med_tittle_section End -->
         <!--blog category section start-->
-        <div class="blog_section med_toppadder100 med_bottompadder100">
+        <div class="blog_section med_toppadder50">
             <div class="container">
                 <div class="blog_category_main_wrapper">
                     <div class="row">
@@ -42,10 +42,12 @@
                                             </figure>
                                         </div>
                                         <div class="blog_txt">
-                                            <h1><a href="#">{{ $single_post->title }}</a></h1>
+                                            <h1><a>{{ $single_post->title }}</a></h1>
+                                            <style>.blog_txt h1 a {font-size: 20px;color:#333!important}.blog_txt span {font-family: 'Open Sans', sans-serif!important;color: #5d5d5d!important;}</style>
                                             <div class="blog_txt_info">
                                                 <ul>
                                                     <li>WRITTEN ON: {{ date_format($single_post->created_at, 'M m, Y') }}</li>
+                                                    <li>By Admin</li>
                                                 </ul>
                                             </div>
                                             {!! $single_post->body !!}

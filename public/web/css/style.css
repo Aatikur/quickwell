@@ -2845,7 +2845,7 @@ textarea:focus {
 	float: left;
 	width: 100%;
 	position: relative;
-	margin-top: -100px;
+	margin-top: -70px;
 	z-index: 1;
 }
 /*********------------partner wrapper--------**************/
@@ -4531,6 +4531,7 @@ th {
 }
 .portfolio-area .portfolio-thumb img {
 	width: 100%;
+	border: 5px solid #2ec8a6;
 }
 .portfolio-area .portfolio-info {
 	position: absolute;

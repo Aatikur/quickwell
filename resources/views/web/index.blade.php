@@ -99,7 +99,7 @@
         <!--about us wrapper end-->
 
         <!--team wrapper start-->
-        <div class="pricing_section med_toppadder30 med_bottompadder100">
+        <div class="pricing_section med_toppadder30 med_bottompadder50">
             <div class="container">
                 <div class="row">
                     <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 col-lg-offset-2">
@@ -119,7 +119,7 @@
                                     <div class="price_box1_wrapper">
                                         <div class="price_box1">
                                             <h1><sub>₹</sub><span>{{ $package->amount }}</span></h1>
-                                            <p>/ per Day</p>
+                                            <p>/ Day</p>
                                         </div>
                                     </div>
                                     <div class="pricing_cont_wrapper">
@@ -238,11 +238,11 @@
         <!-- testimonial wrapper end-->
 
         <!-- booking wrapper start -->
-        <div class="booking_wrapper med_toppadder50">
+        <section class="booking_wrapper portfolio-area med_toppadder50">
             <div class="container">
                 <div class="row">
                     <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 col-lg-offset-2">
-                        <div class="team_heading_wrapper med_bottompadder50 wow fadeInDown" data-wow-delay="0.5s">
+                        <div class="team_heading_wrapper wow fadeInDown" data-wow-delay="0.5s">
                             <h1 class="med_bottompadder20">Certification</h1>
                             <img src="{{asset('web/images/Icon_team.png')}}" alt="line" class="med_bottompadder20">
                         </div>
@@ -250,30 +250,73 @@
                 </div>
             </div>
             <div class="container">
-                <div class="certificate">
-                    <div class="row">
-                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6">
-                            <div class="certificate_img">
-                                <img src="{{asset('web/images/certificate/1.jpg')}}" alt="">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="row portfoli_inner">
+                            <div class="col-md-1 d-none d-lg-block"></div>
+                            <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 col-6 portfolio-wrapper">
+                                <div class="portfolio-thumb">
+                                    <div class="port_img_wrapper">
+                                        <img src="{{asset('web/images/certificate/1.jpg')}}" alt="filter_img">
+                                    </div>
+                                    <div class="portfolio_icon_wrapper_iv zoom_popup">
+                                        <a class="img-link" href="{{asset('web/images/certificate/1.jpg')}}"> <i class="fa fa-search-plus"></i>
+                                        </a>
+                                    </div>
+    
+                                    <div class="portfolio-content">
+                                        <div class="portfolio-info_iv">
+                                            <h3>BRIT QUALIS</h3>
+                                            <p class="d-none d-sm-block">ISO 27001:2013 <br><strong>Quickwell Remedy Healthcare Pvt. Ltd.</strong></p>
+                                        </div>
+                                        <!-- portfolio-info -->
+    
+                                    </div>
+                                    <!-- portfolio-content -->
+    
+                                </div>
+                                <!-- /.portfolio-thumb -->
                             </div>
-                        </div>
-                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6">
-                            <div class="certificate_img">
-                                <img src="{{asset('web/images/certificate/2.jpg')}}" alt="">
+                            <div class="col-md-2 d-none d-lg-block"></div>
+                            <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 col-6 portfolio-wrapper ">
+                                <div class="portfolio-thumb">
+                                    <div class="port_img_wrapper">
+                                        <img src="{{asset('web/images/certificate/1.jpg')}}" alt="filter_img">
+                                    </div>
+                                    <div class="portfolio_icon_wrapper_iv zoom_popup">
+                                        <a class="img-link" href="{{asset('web/images/certificate/1.jpg')}}"> <i class="fa fa-search-plus"></i>
+                                        </a>
+                                    </div>
+    
+                                    <div class="portfolio-content">
+                                        <div class="portfolio-info_iv">
+                                            <h3>BRIT QUALIS</h3>
+                                            <p class="d-none d-sm-block">ISO 27001:2013 <br><strong>Quickwell Remedy Healthcare Pvt. Ltd.</strong></p>
+                                        </div>
+                                        <!-- portfolio-info -->
+    
+                                    </div>
+                                    <!-- portfolio-content -->
+    
+                                </div>
+                                <!-- /.portfolio-thumb -->
                             </div>
+                            <div class="col-md-1 d-none d-lg-block"></div>
                         </div>
+                        <!--/#gridWrapper-->
                     </div>
                 </div>
             </div>
-        </div>
+            <!-- /.container -->
+        </section>
         <!-- testimonial wrapper end-->
 
         <!-- booking wrapper start -->
-        <div class="booking_wrapper med_toppadder100">
+        <div class="booking_wrapper med_toppadder50">
             <div class="container">
                 <div class="row">
                     <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 col-lg-offset-2">
-                        <div class="team_heading_wrapper med_bottompadder50 wow fadeInDown" data-wow-delay="0.5s">
+                        <div class="team_heading_wrapper wow fadeInDown" data-wow-delay="0.5s">
                             <h1 class="med_bottompadder20">Get in Touch</h1>
                             <img src="{{asset('web/images/Icon_team.png')}}" alt="line" class="med_bottompadder20">
                         </div>
